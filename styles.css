@@ -1280,11 +1280,12 @@ body {
         margin-top: 5px;
     }
     .system {
-        margin-bottom: 5px;
+        margin-bottom: 3px;
         overflow: visible;
+        min-height: 100px;
     }
     .cloud-icon {
-        margin-top: -5px;
+        margin-top: -25px;
     }
     .service {
         gap: 40px;
