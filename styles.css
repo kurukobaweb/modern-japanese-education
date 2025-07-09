@@ -1,278 +1,4 @@
-/* 03番（インタラクティブ教科書）専用の調整 */
-.serviceleft:nth-child(2) .secure:first-child .system {
-    width: 117px;
-    height: auto;
-    min-height: 100px;
-    overflow: visible;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-bottom: 0;
-}
-
-.serviceleft:nth-child(2) .secure:first-child .cloud-icon {
-    width: 107.6px;
-    position: relative;
-    max-height: 100%;
-    object-fit: cover;
-    margin-top: -70px;
-}
-
-.serviceleft:nth-child(2) .secure:first-child .lmc {
-    width: 216px;
-    height: auto;
-    min-height: 60px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-    font-size: var(--font-size-18);
-    color: var(--color-gray-300);
-    margin-top: -10px;
-}
-
-/* 04番（日本語学習チャットボット）専用の調整 */
-.serviceleft:nth-child(2) .secure:nth-child(2) .system {
-    width: 117px;
-    height: auto;
-    min-height: 100px;
-    overflow: visible;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-bottom: 0;
-}
-
-.serviceleft:nth-child(2) .secure:nth-child(2) .cloud-icon {
-    width: 107.6px;
-    position: relative;
-    max-height: 100%;
-    object-fit: cover;
-    margin-top: -70px;
-}
-
-.serviceleft:nth-child(2) .secure:nth-child(2) .lmc {
-    width: 216px;
-    height: auto;
-    min-height: 60px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-    font-size: var(--font-size-18);
-    color: var(--color-gray-300);
-    margin-top: -10px;
-}/* 02番（学習管理システム）専用の調整 */
-.serviceleft .secure:nth-child(2) .system {
-    width: 117px;
-    height: auto;
-    min-height: 100px;
-    overflow: visible;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-bottom: 0;
-}
-
-.serviceleft .secure:nth-child(2) .cloud-icon {
-    width: 107.6px;
-    position: relative;
-    max-height: 100%;
-    object-fit: cover;
-    margin-top: -70px;
-}
-
-.serviceleft .secure:nth-child(2) .lmc {
-    width: 216px;
-    height: auto;
-    min-height: 60px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-    font-size: var(--font-size-18);
-    color: var(--color-gray-300);
-    margin-top: -10px;
-}/* 01番（多言語学習アプリ）専用の調整 */
-.serviceleft .secure:first-child .system {
-    width: 117px;
-    height: auto;
-    min-height: 100px;
-    overflow: visible;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-bottom: 0;
-}
-
-.serviceleft .secure:first-child .cloud-icon {
-    width: 107.6px;
-    position: relative;
-    max-height: 100%;
-    object-fit: cover;
-    margin-top: -70px;
-}
-
-.serviceleft .secure:first-child .lmc {
-    width: 216px;
-    height: auto;
-    min-height: 60px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-    font-size: var(--font-size-18);
-    color: var(--color-gray-300);
-    margin-top: -10px;
-}/* HTMLタグ変更に伴うスタイル調整 */
-.logo1 {
-    margin: 0;
-    position: relative;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-family: inherit;
-}
-
-.navbar1 {
-    display: flex;
-    align-items: center;
-    position: relative;
-    font-size: var(--font-size-14);
-    text-transform: uppercase;
-    color: var(--color-white);
-    white-space: nowrap;
-    gap: 30px;
-    font-weight: 600;
-}
-
-.h1 {
-    margin: 0;
-    position: relative;
-    font-size: var(--font-size-24);
-    line-height: 150%;
-    font-weight: 600;
-    font-family: inherit;
-    text-align: center;
-}
-
-.h11 {
-    margin: 0;
-    width: 100%;
-    max-width: 445px;
-    height: 107px;
-    position: relative;
-    font-size: var(--font-size-36);
-    font-weight: 600;
-    font-family: inherit;
-    text-align: left;
-    display: inline-block;
-}
-
-.h12 {
-    margin: 0;
-    width: 100%;
-    max-width: 445px;
-    height: 107px;
-    position: relative;
-    font-size: var(--font-size-36);
-    font-weight: 600;
-    font-family: inherit;
-    display: inline-block;
-}
-
-.placeholder-one {
-    margin: 0;
-    position: relative;
-    font-size: inherit;
-    font-weight: 700;
-    font-family: inherit;
-}
-
-.div4 {
-    position: relative;
-    font-size: var(--font-size-14);
-    text-transform: uppercase;
-    font-family: var(--font-lato);
-    color: var(--color-white);
-    text-align: left;
-}/* モバイルでの.lmc統一 */
-@media screen and (max-width: 750px) {
-    .secure .lmc {
-        width: 100%;
-        height: auto;
-        min-height: 83px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 6px;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .secure .lmc {
-        min-height: 60px;
-    }
-}@media screen and (max-width: 430px) {
-    .initiative1 {
-        line-height: 1.4;
-        word-spacing: 0.1em;
-        margin-bottom: 50px;
-    }
-    .initiative-grid {
-        margin-top: 40px;
-    }
-}/* フォームバリデーション用スタイル */
-.input.error,
-.input1.error,
-.input2.error,
-.input3.error,
-.free-word.error {
-    border-color: #dc143c !important;
-    box-shadow: 0 0 0 2px rgba(220, 20, 60, 0.2);
-}
-
-.input:focus,
-.input1:focus,
-.input2:focus,
-.input3:focus,
-.free-word:focus {
-    border-color: var(--color-cornflowerblue);
-    box-shadow: 0 0 0 2px rgba(100, 149, 237, 0.2);
-    outline: none;
-}
-
-.submit-buttons:disabled {
-    background-color: var(--color-gray-400);
-    border-color: var(--color-gray-400);
-    cursor: not-allowed;
-}
-
-.submit-buttons:disabled:hover {
-    background-color: var(--color-gray-400);
-    border-color: var(--color-gray-400);
-}/* CSS変数定義 */
+/* CSS変数定義 */
 :root {
     --color-white: #ffffff;
     --color-black: #000000;
@@ -711,6 +437,7 @@ body {
     font-size: var(--font-size-12);
     color: var(--color-black);
     display: inline-block;
+    margin: 0;
 }
 
 .cloud {
@@ -760,8 +487,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: var(--gap-6);
+    justify-content: flex-start;
+    gap: 3px;
     font-size: var(--font-size-18);
     color: var(--color-gray-300);
 }
@@ -818,6 +545,158 @@ body {
     font-family: var(--font-lato);
     margin: 0 auto;
     padding: 60px 40px;
+}
+
+/* 01番（多言語学習アプリ）専用の調整 */
+.serviceleft .secure:first-child .system {
+    width: 117px;
+    height: auto;
+    min-height: 100px;
+    overflow: visible;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 0;
+}
+
+.serviceleft .secure:first-child .cloud-icon {
+    width: 107.6px;
+    position: relative;
+    max-height: 100%;
+    object-fit: cover;
+    margin-top: -70px;
+}
+
+.serviceleft .secure:first-child .lmc {
+    width: 216px;
+    height: auto;
+    min-height: 60px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3px;
+    font-size: var(--font-size-18);
+    color: var(--color-gray-300);
+    margin-top: -10px;
+}
+
+/* 02番（学習管理システム）専用の調整 */
+.serviceleft .secure:nth-child(2) .system {
+    width: 117px;
+    height: auto;
+    min-height: 100px;
+    overflow: visible;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 0;
+}
+
+.serviceleft .secure:nth-child(2) .cloud-icon {
+    width: 107.6px;
+    position: relative;
+    max-height: 100%;
+    object-fit: cover;
+    margin-top: -70px;
+}
+
+.serviceleft .secure:nth-child(2) .lmc {
+    width: 216px;
+    height: auto;
+    min-height: 60px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3px;
+    font-size: var(--font-size-18);
+    color: var(--color-gray-300);
+    margin-top: -10px;
+}
+
+/* 03番（インタラクティブ教科書）専用の調整 */
+.serviceleft:nth-child(2) .secure:first-child .system {
+    width: 117px;
+    height: auto;
+    min-height: 100px;
+    overflow: visible;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 0;
+}
+
+.serviceleft:nth-child(2) .secure:first-child .cloud-icon {
+    width: 107.6px;
+    position: relative;
+    max-height: 100%;
+    object-fit: cover;
+    margin-top: -70px;
+}
+
+.serviceleft:nth-child(2) .secure:first-child .lmc {
+    width: 216px;
+    height: auto;
+    min-height: 60px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3px;
+    font-size: var(--font-size-18);
+    color: var(--color-gray-300);
+    margin-top: -10px;
+}
+
+/* 04番（日本語学習チャットボット）専用の調整 */
+.serviceleft:nth-child(2) .secure:nth-child(2) .system {
+    width: 117px;
+    height: auto;
+    min-height: 100px;
+    overflow: visible;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 0;
+}
+
+.serviceleft:nth-child(2) .secure:nth-child(2) .cloud-icon {
+    width: 107.6px;
+    position: relative;
+    max-height: 100%;
+    object-fit: cover;
+    margin-top: -70px;
+}
+
+.serviceleft:nth-child(2) .secure:nth-child(2) .lmc {
+    width: 216px;
+    height: auto;
+    min-height: 60px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3px;
+    font-size: var(--font-size-18);
+    color: var(--color-gray-300);
+    margin-top: -10px;
 }
 
 /* 実例セクション */
@@ -1264,6 +1143,111 @@ body {
     letter-spacing: normal;
 }
 
+/* HTMLタグ変更に伴うスタイル調整 */
+.logo1 {
+    margin: 0;
+    position: relative;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: inherit;
+}
+
+.navbar1 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: var(--font-size-14);
+    text-transform: uppercase;
+    color: var(--color-white);
+    white-space: nowrap;
+    gap: 30px;
+    font-weight: 600;
+}
+
+.h1 {
+    margin: 0;
+    position: relative;
+    font-size: var(--font-size-24);
+    line-height: 150%;
+    font-weight: 600;
+    font-family: inherit;
+    text-align: center;
+}
+
+.h11 {
+    margin: 0;
+    width: 100%;
+    max-width: 445px;
+    height: 107px;
+    position: relative;
+    font-size: var(--font-size-36);
+    font-weight: 600;
+    font-family: inherit;
+    text-align: left;
+    display: inline-block;
+}
+
+.h12 {
+    margin: 0;
+    width: 100%;
+    max-width: 445px;
+    height: 107px;
+    position: relative;
+    font-size: var(--font-size-36);
+    font-weight: 600;
+    font-family: inherit;
+    display: inline-block;
+}
+
+.placeholder-one {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    font-weight: 700;
+    font-family: inherit;
+}
+
+.div4 {
+    position: relative;
+    font-size: var(--font-size-14);
+    text-transform: uppercase;
+    font-family: var(--font-lato);
+    color: var(--color-white);
+    text-align: left;
+}
+
+/* フォームバリデーション用スタイル */
+.input.error,
+.input1.error,
+.input2.error,
+.input3.error,
+.free-word.error {
+    border-color: #dc143c !important;
+    box-shadow: 0 0 0 2px rgba(220, 20, 60, 0.2);
+}
+
+.input:focus,
+.input1:focus,
+.input2:focus,
+.input3:focus,
+.free-word:focus {
+    border-color: var(--color-cornflowerblue);
+    box-shadow: 0 0 0 2px rgba(100, 149, 237, 0.2);
+    outline: none;
+}
+
+.submit-buttons:disabled {
+    background-color: var(--color-gray-400);
+    border-color: var(--color-gray-400);
+    cursor: not-allowed;
+}
+
+.submit-buttons:disabled:hover {
+    background-color: var(--color-gray-400);
+    border-color: var(--color-gray-400);
+}
+
 /* レスポンシブデザイン */
 @media screen and (max-width: 1200px) {
     .contact-us,
@@ -1534,7 +1518,25 @@ body {
     }
 }
 
+/* モバイルでの.lmc統一 */
+@media screen and (max-width: 750px) {
+    .secure .lmc {
+        width: 100%;
+        height: auto;
+        min-height: 83px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+    }
+}
+
 @media screen and (max-width: 450px) {
+    .secure .lmc {
+        min-height: 60px;
+    }
+    
     .logo,
     .logo1,
     .navbar {
@@ -1555,3 +1557,66 @@ body {
         font-size: 43px;
     }
     .h1 {
+        font-size: var(--font-size-19);
+    }
+    .herotextcontainer {
+        gap: var(--gap-5);
+    }
+    .herosection {
+        gap: 19px;
+        padding-left: var(--padding-20);
+        padding-right: var(--padding-20);
+        box-sizing: border-box;
+    }
+    .left-text {
+        gap: var(--gap-19);
+    }
+    .lead-section {
+        padding: var(--padding-19) var(--padding-20);
+        box-sizing: border-box;
+        gap: var(--gap-19);
+    }
+    .initiative {
+        padding: var(--padding-19) var(--padding-20);
+        box-sizing: border-box;
+        gap: var(--gap-19);
+    }
+    .initiative-grid {
+        gap: var(--gap-19);
+    }
+    .servicemain {
+        gap: var(--gap-19);
+    }
+    .service {
+        padding: var(--padding-19) var(--padding-20);
+        box-sizing: border-box;
+        gap: var(--gap-19);
+    }
+    .example {
+        padding: var(--padding-19) var(--padding-20);
+        box-sizing: border-box;
+        gap: var(--gap-19);
+    }
+    .contact-us {
+        padding: var(--padding-19) var(--padding-20);
+        box-sizing: border-box;
+        gap: var(--gap-19);
+    }
+    .right-field {
+        gap: var(--gap-19);
+    }
+    .landing-page {
+        gap: var(--gap-19);
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .initiative1 {
+        line-height: 1.4;
+        word-spacing: 0.1em;
+        margin-bottom: 50px;
+    }
+    .initiative-grid {
+        margin-top: 40px;
+    }
+}
