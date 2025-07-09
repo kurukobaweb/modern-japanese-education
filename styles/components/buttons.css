@@ -1,0 +1,99 @@
+/* ==============================================
+   ボタンコンポーネント
+   ============================================== */
+
+/* 送信ボタン */
+.btn-submit {
+    cursor: pointer;
+    border: 1.5px solid var(--color-crimson);
+    padding: 0 var(--padding-20) 0 50px;
+    background-color: var(--color-crimson);
+    width: 160px;
+    height: 50px;
+    border-radius: var(--br-6);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--color-salmon);
+    border: 1.5px solid var(--color-salmon);
+    box-sizing: border-box;
+}
+
+.btn-submit:disabled {
+    background-color: var(--color-gray-400);
+    border-color: var(--color-gray-400);
+    cursor: not-allowed;
+}
+
+.btn-submit:disabled:hover {
+    background-color: var(--color-gray-400);
+    border-color: var(--color-gray-400);
+}
+
+.btn-submit__text {
+    position: relative;
+    font-size: var(--font-size-14);
+    text-transform: uppercase;
+    font-family: var(--font-lato);
+    color: var(--color-white);
+    text-align: left;
+}
+
+/* Learn Moreボタン */
+.btn-learn-more {
+    position: relative;
+    line-height: 140%;
+    color: var(--color-crimson);
+    display: none;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.btn-learn-more:hover {
+    color: var(--color-salmon);
+}
+
+/* 汎用ボタンクラス */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: var(--br-6);
+    font-family: var(--font-lato);
+    font-size: var(--font-size-14);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn--primary {
+    background-color: var(--color-crimson);
+    color: var(--color-white);
+    border: 1.5px solid var(--color-crimson);
+}
+
+.btn--primary:hover {
+    background-color: var(--color-salmon);
+    border-color: var(--color-salmon);
+}
+
+.btn--secondary {
+    background-color: transparent;
+    color: var(--color-crimson);
+    border: 1.5px solid var(--color-crimson);
+}
+
+.btn--secondary:hover {
+    background-color: var(--color-crimson);
+    color: var(--color-white);
+}

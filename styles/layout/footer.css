@@ -1,0 +1,117 @@
+/* ==============================================
+   フッター
+   ============================================== */
+
+.footer {
+    width: 100%;
+    max-width: 1440px;
+    height: 202px;
+    background-color: var(--color-gray-100);
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 9px 31px;
+    box-sizing: border-box;
+    gap: 107px;
+    text-align: left;
+    font-size: var(--font-size-18);
+    color: var(--color-gray-300);
+    font-family: var(--font-lato);
+}
+
+.footer__content {
+    display: contents;
+}
+
+/* 所在地セクション */
+.footer__address {
+    height: 202px;
+    width: 100%;
+    max-width: 259px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 45px;
+    font-size: var(--font-size-12);
+}
+
+.footer__address-title {
+    margin: 0;
+    position: relative;
+    font-size: var(--font-size-18);
+    font-weight: 700;
+    font-family: inherit;
+    text-align: center;
+}
+
+.footer__address-text {
+    width: 100%;
+    max-width: 254px;
+    position: relative;
+    line-height: 150%;
+    display: inline-block;
+}
+
+.footer__copyright {
+    position: relative;
+}
+
+/* サービス・サポートセクション */
+.footer__service {
+    height: 164px;
+    width: 100%;
+    max-width: 254px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-24);
+}
+
+.footer__service-title {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    font-weight: 700;
+    font-family: inherit;
+}
+
+.footer__service-links {
+    width: 100%;
+    max-width: 254px;
+    position: relative;
+    font-size: var(--font-size-12);
+    line-height: 160%;
+    text-transform: capitalize;
+    color: var(--color-black);
+    display: inline-block;
+}
+
+.footer__service-links a {
+    color: var(--color-black);
+    text-decoration: none;
+    margin-right: 8px;
+    transition: color 0.3s ease;
+}
+
+.footer__service-links a:hover {
+    color: var(--color-crimson);
+}
+
+/* ロゴ */
+.footer__logo {
+    width: 100%;
+    max-width: 280px;
+    position: relative;
+    max-height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.footer__logo:hover {
+    opacity: 0.8;
+}

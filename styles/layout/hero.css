@@ -1,0 +1,56 @@
+/* ==============================================
+   ヒーローセクション
+   ============================================== */
+
+.hero {
+    width: 100%;
+    max-width: 1440px;
+    height: 782px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 80px;
+    gap: 150px;
+    background-image: url(../public/herosection@3x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    text-align: left;
+    font-size: 72px;
+    color: var(--color-white);
+    font-family: var(--font-lato);
+}
+
+.hero__text-container {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    height: 500px;
+    overflow: hidden;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-10);
+}
+
+.hero__title {
+    position: relative;
+    font-size: 72px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: inherit;
+    margin: 0;
+    text-align: center;
+}
+
+.hero__subtitle {
+    margin: 0;
+    position: relative;
+    font-size: var(--font-size-24);
+    line-height: 150%;
+    font-weight: 600;
+    font-family: inherit;
+    text-align: center;
+}

@@ -1,0 +1,58 @@
+/* ==============================================
+   リセットCSS・基本設定
+   ============================================== */
+
+/* Box-sizing reset */
+* {
+    box-sizing: border-box;
+}
+
+/* Body基本設定 */
+body {
+    margin: 0;
+    font-family: var(--font-lato);
+    line-height: 1.6;
+}
+
+/* 基本的なリセット */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: inherit;
+    font-family: inherit;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Form要素のリセット */
+input, textarea, button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* Focus状態の統一 */
+input:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(100, 149, 237, 0.2);
+}

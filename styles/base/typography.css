@@ -1,0 +1,72 @@
+/* ==============================================
+   タイポグラフィ
+   ============================================== */
+
+/* メインタイトル */
+.main-title {
+    position: relative;
+    font-size: 72px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: inherit;
+    margin: 0;
+    text-align: center;
+}
+
+/* サブタイトル */
+.sub-title {
+    margin: 0;
+    position: relative;
+    font-size: var(--font-size-24);
+    line-height: 150%;
+    font-weight: 600;
+    font-family: inherit;
+    text-align: center;
+}
+
+/* セクションタイトル */
+.section-title {
+    margin: 0;
+    height: 55px;
+    width: 100%;
+    position: relative;
+    font-size: var(--font-size-36);
+    font-family: inherit;
+    text-align: center;
+}
+
+/* カードタイトル */
+.card-title {
+    margin: 0;
+    position: relative;
+    font-size: var(--font-size-18);
+    font-weight: 700;
+    font-family: inherit;
+}
+
+/* 本文テキスト */
+.body-text {
+    width: 100%;
+    position: relative;
+    line-height: 140%;
+    display: inline-block;
+}
+
+/* 説明文 */
+.description-text {
+    position: relative;
+    font-size: var(--font-size-12);
+    color: var(--color-black);
+    display: inline-block;
+    margin: 0;
+}
+
+/* 番号表示 */
+.number-display {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    font-weight: 700;
+    font-family: inherit;
+}

@@ -1,0 +1,72 @@
+/* ==============================================
+   ヘッダー・ナビゲーション
+   ============================================== */
+
+/* ロゴ */
+.header__logo-icon {
+    height: 29px;
+    width: 29px;
+    position: relative;
+}
+
+.header__logo-text {
+    margin: 0;
+    position: relative;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: inherit;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    height: 29px;
+    width: 118px;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 7px;
+}
+
+/* ナビゲーション */
+.header__nav-menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: var(--font-size-14);
+    text-transform: uppercase;
+    color: var(--color-white);
+    white-space: nowrap;
+    gap: 30px;
+    font-weight: 600;
+}
+
+.header__nav-link {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header__nav-link:hover {
+    color: var(--color-crimson);
+}
+
+/* ヘッダーコンテナ */
+.header {
+    width: 100%;
+    max-width: 1440px;
+    height: 100px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 165px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    text-align: left;
+    font-size: var(--font-size-18);
+    color: var(--color-gray-200);
+    font-family: var(--font-lato);
+}

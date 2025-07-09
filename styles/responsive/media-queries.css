@@ -1,0 +1,187 @@
+/* ==============================================
+   レスポンシブデザイン - メディアクエリ
+   ============================================== */
+
+/* Large Desktop (1200px以上) */
+@media screen and (max-width: 1200px) {
+    .contact-section,
+    .example-section,
+    .lead-section {
+        padding-left: 82px;
+        padding-right: 82px;
+        box-sizing: border-box;
+    }
+    
+    .contact-section {
+        gap: 57px;
+        padding-left: 81px;
+        padding-right: 81px;
+    }
+}
+
+/* Desktop (1050px以下) */
+@media screen and (max-width: 1050px) {
+    .header {
+        padding-left: 82px;
+        padding-right: 82px;
+        box-sizing: border-box;
+    }
+    
+    .hero__title {
+        font-size: 58px;
+    }
+    
+    .lead-section__title,
+    .initiative-section__title,
+    .service-section__title {
+        font-size: 29px;
+    }
+    
+    .number-display {
+        font-size: 50px;
+    }
+    
+    .contact-section__title {
+        font-size: 29px;
+    }
+}
+
+/* Tablet (750px以下) */
+@media screen and (max-width: 750px) {
+    /* ナビゲーション非表示 */
+    .header__nav-menu {
+        display: none;
+    }
+    
+    .header {
+        width: 100%;
+    }
+    
+    /* ヒーローセクション */
+    .hero {
+        gap: 75px;
+        padding-left: var(--padding-40);
+        padding-right: var(--padding-40);
+        box-sizing: border-box;
+        height: auto;
+        min-height: 400px;
+    }
+    
+    .hero__text-container {
+        height: auto;
+        min-height: 300px;
+        padding: 40px 0;
+    }
+    
+    /* セクション調整 */
+    .initiative-section,
+    .lead-section {
+        padding: 61px 41px;
+        box-sizing: border-box;
+    }
+    
+    /* リードセクション モバイル調整 */
+    .lead-section {
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+    }
+    
+    .lead-section__text {
+        order: 2;
+        width: 100%;
+        max-width: none;
+    }
+    
+    .lead-section__image {
+        order: 1;
+        width: 100%;
+        max-width: none;
+        margin-bottom: 20px;
+    }
+    
+    /* 取り組みセクション */
+    .initiative-section {
+        gap: 15px;
+        padding: 41px 82px;
+    }
+    
+    .initiative-section__title {
+        margin-bottom: 40px;
+    }
+    
+    .initiative-section__grid {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+    
+    .initiative-card {
+        align-self: center;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .initiative-card__image {
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    /* サービスセクション モバイル調整 */
+    .service-section__grid {
+        flex-direction: column;
+        height: auto;
+        gap: 30px;
+    }
+    
+    .service-section__column {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        gap: 30px;
+        align-items: center;
+    }
+    
+    .service-card {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        min-height: 200px;
+    }
+    
+    .service-card__content {
+        width: 100%;
+        height: auto;
+        min-height: 83px;
+        gap: 6px;
+    }
+    
+    .service-section {
+        gap: 40px;
+        padding: 40px 20px;
+    }
+    
+    /* 実例セクション */
+    .example-section {
+        padding: 75px 41px;
+        box-sizing: border-box;
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        align-items: center;
+    }
+    
+    .example-section__text {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 20px;
+        order: 1;
+    }
+    

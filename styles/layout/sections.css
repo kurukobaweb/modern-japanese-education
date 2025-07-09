@@ -1,0 +1,222 @@
+/* ==============================================
+   セクション共通スタイル
+   ============================================== */
+
+/* リードセクション */
+.lead-section {
+    width: 100%;
+    max-width: 1440px;
+    background-color: var(--color-white);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 94px 165px;
+    gap: 0;
+    text-align: justify;
+    font-size: var(--font-size-14);
+    color: var(--color-black);
+    font-family: var(--font-lato);
+}
+
+.lead-section__text {
+    height: 246px;
+    width: 100%;
+    max-width: 445px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-24);
+}
+
+.lead-section__title {
+    margin: 0;
+    width: 100%;
+    max-width: 445px;
+    height: 107px;
+    position: relative;
+    font-size: var(--font-size-36);
+    font-weight: 600;
+    font-family: inherit;
+    text-align: left;
+    display: inline-block;
+}
+
+.lead-section__description {
+    width: 100%;
+    max-width: 445px;
+    position: relative;
+    line-height: 140%;
+    display: inline-block;
+}
+
+.lead-section__learn-more {
+    position: relative;
+    line-height: 140%;
+    color: var(--color-crimson);
+    display: none;
+    white-space: nowrap;
+}
+
+.lead-section__image {
+    height: 311px;
+    width: 100%;
+    max-width: 445px;
+    position: relative;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* 取り組みセクション */
+.initiative-section {
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    background-color: var(--color-gray-100);
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 63px 165px;
+    gap: 63px;
+    font-size: var(--font-size-36);
+    color: var(--color-black);
+}
+
+.initiative-section__title {
+    margin: 0;
+    height: 55px;
+    width: 100%;
+    position: relative;
+    font-size: var(--font-size-36);
+    display: inline-block;
+    font-family: inherit;
+    text-align: center;
+}
+
+.initiative-section__grid {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--gap-30);
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* サービスセクション */
+.service-section {
+    width: 100%;
+    max-width: 1193px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 52px;
+    text-align: center;
+    font-size: var(--font-size-36);
+    color: var(--color-black);
+    font-family: var(--font-lato);
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+.service-section__title {
+    margin: 0;
+    align-self: stretch;
+    height: 55px;
+    position: relative;
+    font-size: var(--font-size-36);
+    font-family: inherit;
+    display: inline-block;
+}
+
+.service-section__grid {
+    width: 100%;
+    max-width: 1102px;
+    height: 226px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    font-size: var(--font-size-100);
+    color: var(--color-gray-500);
+}
+
+.service-section__column {
+    width: 532px;
+    height: 226px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 38px;
+}
+
+/* 実例セクション */
+.example-section {
+    width: 100%;
+    max-width: 1440px;
+    background-color: var(--color-cornflowerblue);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 116px 165px;
+    gap: 0;
+    text-align: left;
+    font-size: var(--font-size-24);
+    color: var(--color-white);
+    font-family: var(--font-lato);
+}
+
+.example-section__text {
+    height: 195px;
+    width: 100%;
+    max-width: 471px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--gap-24);
+}
+
+.example-section__status {
+    width: 100%;
+    max-width: 471px;
+    position: relative;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.example-section__title {
+    margin: 0;
+    font-size: var(--font-size-36);
+}
+
+.example-section__description {
+    width: 100%;
+    max-width: 471px;
+    position: relative;
+    font-size: var(--font-size-14);
+    line-height: 140%;
+    text-align: justify;
+    display: inline-block;
+}
+
+.example-section__image {
+    height: 267px;
+    width: 100%;
+    max-width: 533px;
+    position: relative;
+    object-fit: cover;
+}
