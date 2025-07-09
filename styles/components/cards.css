@@ -150,6 +150,24 @@
     margin-top: -70px;
 }
 
+/* サービスカード個別調整 */
+.service-card--app .service-card__icon-container,
+.service-card--lms .service-card__icon-container,
+.service-card--textbook .service-card__icon-container,
+.service-card--chatbot .service-card__icon-container {
+    width: 117px;
+    height: auto;
+    min-height: 100px;
+    margin-bottom: 0;
+}
+
+.service-card--app .service-card__icon,
+.service-card--lms .service-card__icon,
+.service-card--textbook .service-card__icon,
+.service-card--chatbot .service-card__icon {
+    margin-top: -70px;
+}
+
 .service-card--app .service-card__content,
 .service-card--lms .service-card__content,
 .service-card--textbook .service-card__content,
@@ -158,4 +176,5 @@
     height: auto;
     min-height: 60px;
     margin-top: -10px;
+    justify-content: flex-start;
 }
