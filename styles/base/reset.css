@@ -56,3 +56,20 @@ button:focus {
     outline: none;
     box-shadow: 0 0 0 2px rgba(100, 149, 237, 0.2);
 }
+
+/* ヒーロー表示確実化 */
+.hero {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.hero__text-container {
+    display: flex !important;
+    visibility: visible !important;
+}
+
+.header {
+    display: flex !important;
+    visibility: visible !important;
+}
