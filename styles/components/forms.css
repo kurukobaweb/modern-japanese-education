@@ -56,6 +56,60 @@
     margin-top: -11px;
 }
 
+/* お問い合わせセクション */
+.contact-section {
+    width: 100%;
+    max-width: 1440px;
+    height: 636px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 15px 163px;
+    gap: 114px;
+    text-align: left;
+    font-size: var(--font-size-36);
+    color: var(--color-black);
+    font-family: var(--font-lato);
+}
+
+.contact-section__text {
+    height: 200px;
+    width: 100%;
+    max-width: 445px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-20) 0;
+}
+
+.contact-section__title {
+    margin: 0;
+    width: 100%;
+    max-width: 445px;
+    height: 107px;
+    position: relative;
+    font-size: var(--font-size-36);
+    font-weight: 600;
+    font-family: inherit;
+    display: inline-block;
+}
+
+.contact-section__description {
+    width: 100%;
+    max-width: 434px;
+    position: relative;
+    font-size: var(--font-size-14);
+    line-height: 140%;
+    text-align: justify;
+    display: inline-block;
+    margin-top: -11px;
+}
+
 /* フォーム */
 .form {
     width: 100%;
@@ -224,4 +278,53 @@
     align-items: flex-start;
     justify-content: flex-end;
     gap: 13px;
+}
+
+/* モバイル対応: フォーム調整 */
+@media screen and (max-width: 750px) {
+    .contact-section {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .contact-section__text {
+        width: 100%;
+        max-width: none;
+        height: auto;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .contact-section__title {
+        width: 100%;
+        max-width: none;
+        height: auto;
+        text-align: center;
+    }
+    
+    .contact-section__description {
+        width: 100%;
+        max-width: none;
+        text-align: center;
+        margin-top: 0;
+    }
+    
+    .form {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .form__name-group {
+        flex-direction: column;
+        height: auto;
+        gap: 16px;
+    }
+    
+    .form__name-field {
+        width: 100%;
+        max-width: none;
+    }
 }
