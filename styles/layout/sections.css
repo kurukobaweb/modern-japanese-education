@@ -266,3 +266,11 @@
     display: inline-block;
     margin-top: -11px;
 }
+
+.example-section__image {
+    height: 267px;
+    width: 100%;
+    max-width: 533px;
+    position: relative;
+    object-fit: cover;
+}
