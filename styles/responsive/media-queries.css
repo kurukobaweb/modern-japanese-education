@@ -184,3 +184,228 @@
         margin-bottom: 20px;
         order: 1;
     }
+    
+    .example-section__image {
+        order: 2;
+        margin-top: 20px;
+    }
+    
+    .example-section__description {
+        margin-bottom: 20px;
+    }
+    
+    /* お問い合わせセクション モバイル調整 */
+    .contact-section {
+        gap: 40px;
+        padding-left: var(--padding-40);
+        padding-right: var(--padding-40);
+        box-sizing: border-box;
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+    
+    .contact-section__text {
+        text-align: center;
+        align-items: center;
+    }
+    
+    .contact-section__title {
+        text-align: center;
+    }
+    
+    .contact-section__description {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .form__name-group {
+        gap: 16px;
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .form__name-field {
+        max-width: none;
+        width: 100%;
+        padding: 0 31px;
+    }
+    
+    .btn-submit {
+        align-self: center;
+        margin: 0 auto;
+    }
+    
+    .form {
+        width: 100%;
+        max-width: none;
+        padding: 20px 0;
+    }
+    
+    .form__grid {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .form__field {
+        width: 100%;
+        max-width: none;
+    }
+    
+    /* フッター モバイル調整 */
+    .footer {
+        gap: 30px;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 15px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .footer__address, 
+    .footer__service {
+        flex: 1;
+        min-width: 120px;
+        text-align: left;
+    }
+    
+    .footer__logo {
+        width: 100%;
+        max-width: 200px;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .landing-page {
+        gap: var(--gap-30);
+    }
+}
+
+/* Mobile (450px以下) */
+@media screen and (max-width: 450px) {
+    .service-card__content {
+        min-height: 60px;
+    }
+    
+    .header__logo,
+    .header__logo-text,
+    .header {
+        height: auto;
+    }
+    
+    .header {
+        align-self: stretch;
+        width: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 0;
+        padding-left: var(--padding-20);
+        padding-right: var(--padding-20);
+        box-sizing: border-box;
+    }
+    
+    .hero__title {
+        font-size: 43px;
+    }
+    
+    .hero__subtitle {
+        font-size: var(--font-size-19);
+    }
+    
+    .hero__text-container {
+        gap: var(--gap-5);
+    }
+    
+    .hero {
+        gap: 19px;
+        padding-left: var(--padding-20);
+        padding-right: var(--padding-20);
+        box-sizing: border-box;
+    }
+    
+    .lead-section__text {
+        gap: var(--gap-19);
+    }
+    
+    .lead-section {
+        padding: var(--padding-19) var(--padding-20);
+        box-sizing: border-box;
+        gap: var(--gap-19);
+    }
+    
+    .initiative-section {
+        padding: var(--padding-19) var(--padding-20);
+        box-sizing: border-box;
+        gap: var(--gap-19);
+    }
+    
+    .initiative-section__grid {
+        gap: var(--gap-19);
+    }
+    
+    .service-section__grid {
+        gap: var(--gap-19);
+    }
+    
+    .service-section {
+        padding: var(--padding-19) var(--padding-20);
+        box-sizing: border-box;
+        gap: var(--gap-19);
+    }
+    
+    .example-section {
+        padding: var(--padding-19) var(--padding-20);
+        box-sizing: border-box;
+        gap: var(--gap-19);
+    }
+    
+    .contact-section {
+        padding: var(--padding-19) var(--padding-20);
+        box-sizing: border-box;
+        gap: var(--gap-19);
+    }
+    
+    .form {
+        gap: var(--gap-19);
+    }
+    
+    .landing-page {
+        gap: var(--gap-19);
+    }
+}
+
+/* Extra Small Mobile (430px以下) */
+@media screen and (max-width: 430px) {
+    .initiative-section__title {
+        line-height: 1.4;
+        word-spacing: 0.1em;
+        margin-bottom: 50px;
+    }
+    
+    .initiative-section__grid {
+        margin-top: 40px;
+    }
+}
+
+/* モバイルでのサービスカード統一 */
+@media screen and (max-width: 750px) {
+    .service-card__content {
+        width: 100%;
+        height: auto;
+        min-height: 83px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+    }
+}
