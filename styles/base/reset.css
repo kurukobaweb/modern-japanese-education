@@ -73,3 +73,24 @@ button:focus {
     display: flex !important;
     visibility: visible !important;
 }
+
+/* 折りたたみ機能用スタイル */
+.hidden {
+    display: none !important;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: var(--color-crimson);
+    cursor: pointer;
+    font-size: inherit;
+    font-weight: 600;
+    margin-left: 5px;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    color: var(--color-salmon);
+}
