@@ -12,7 +12,7 @@
     justify-content: flex-start;
     padding: 0 80px;
     gap: 150px;
-    background-image: url(../public/herosection@3x.png);
+    background-image: url(/public/herosection@3x.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
