@@ -33,7 +33,7 @@
     <!-- フォント -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap" />
     
-    <!-- 分割されたスタイルシート -->
+    <!-- 分割されたスタイルシート（正しい順序で読み込み） -->
     <link rel="stylesheet" href="./styles/base/variables.css" />
     <link rel="stylesheet" href="./styles/base/reset.css" />
     <link rel="stylesheet" href="./styles/base/typography.css" />
@@ -198,14 +198,20 @@
             <section class="example-section">
                 <div class="example-section__text">
                     <div class="example-section__status">
-                        <h2>開発中</h2>
-                        <h3 class="example-section__title">笈川式日本語スピーチアプリ</h3>
+                        <h2>日本語スピーチ協会認定</h2>
+                        <h3 class="example-section__title">日本語スピーチ判定アプリ</h3>
                     </div>
                     <p class="example-section__description">
-                        笈川式スピーチアプリの説明が入ります笈川式スピーチアプリの説明が入ります笈川式スピーチアプリの説明が入ります笈川式スピーチアプリの説明が入ります笈川式スピーチアプリの説明が入ります
+                        コミュニケーション能力は、語彙や文法の正確さと必ずしも比例するものではない――この事実は、すでに多くの現場で語られています。だからこそ、私たちはこのアプリを通じて「話す力」を育てたいのです。大切なのは、ポジティブな理由と、自分らしいエピソードを添えて話すこと。それが、自然に発話時間を伸ばし、文字数を増やすことにつながります。
+                    </p>
+                    <p class="example-section__author">
+                        監修 NPO法人日本語スピーチ協会　笈川幸司
+                    </p>
+                    <p class="example-section__link">
+                        <a href="https://edu.modern.co.jp/supportapp/" target="_blank" rel="noopener">現在開発中、サンプルはこちら</a>
                     </p>
                 </div>
-                <img class="example-section__image" loading="lazy" alt="笈川式日本語スピーチアプリのスクリーンショット" src="./public/slider@2x.png" />
+                <img class="example-section__image" loading="lazy" alt="日本語スピーチ判定アプリのスクリーンショット" src="./public/slider@2x.png" />
             </section>
             
             <section class="contact-section" id="contact">
