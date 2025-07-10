@@ -193,3 +193,58 @@ ${inquiryContent.value.trim()}
 
     console.log('お問い合わせフォームが初期化されました。');
 });
+
+// モバイル時のテキスト折りたたみ機能
+document.addEventListener('DOMContentLoaded', function() {
+    const description = document.querySelector('.example-section__description');
+    
+    if (description && window.innerWidth <= 750) {
+        const fullText = description.textContent;
+        const shortText = fullText.substring(0, 60) + '...';
+        
+        // 短縮テキストと「続きを読む」ボタンを作成
+        description.innerHTML = `
+            <span class="short-text">${shortText}</span>
+            <span class="full-text hidden">${fullText}</span>
+            <button class="read-more-btn" style="
+                background: none;
+                border: none;
+                color: #dc143c;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: 600;
+                margin-left: 5px;
+                text-decoration: underline;
+            ">続きを読む</button>
+        `;
+        
+        // 「続きを読む」ボタンのイベントリスナー
+        const readMoreBtn = description.querySelector('.read-more-btn');
+        const shortTextSpan = description.querySelector('.short-text');
+        const fullTextSpan = description.querySelector('.full-text');
+        
+        readMoreBtn.addEventListener('click', function() {
+            if (fullTextSpan.classList.contains('hidden')) {
+                // 全文表示
+                shortTextSpan.style.display = 'none';
+                fullTextSpan.classList.remove('hidden');
+                readMoreBtn.textContent = '閉じる';
+            } else {
+                // 短縮表示
+                shortTextSpan.style.display = 'inline';
+                fullTextSpan.classList.add('hidden');
+                readMoreBtn.textContent = '続きを読む';
+            }
+        });
+    }
+    
+    // ウィンドウリサイズ時の再初期化
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 750) {
+            // PC表示時は全文表示に戻す
+            if (description) {
+                description.innerHTML = description.querySelector('.full-text')?.textContent || description.textContent;
+            }
+        }
+    });
+});
