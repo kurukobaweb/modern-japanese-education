@@ -180,7 +180,8 @@
 }
 
 .example-section__text {
-    height: 195px;
+    height: auto;
+    min-height: 195px;
     width: 100%;
     max-width: 471px;
     display: flex;
@@ -188,19 +189,6 @@
     align-items: center;
     justify-content: flex-start;
     gap: var(--gap-24);
-}
-
-.example-section__status {
-    width: 100%;
-    max-width: 471px;
-    position: relative;
-    font-weight: 600;
-    display: inline-block;
-}
-
-.example-section__title {
-    margin: 0;
-    font-size: var(--font-size-36);
 }
 
 .example-section__description {
@@ -211,6 +199,47 @@
     line-height: 140%;
     text-align: justify;
     display: inline-block;
+}
+
+.example-section__author {
+    width: 100%;
+    max-width: 471px;
+    position: relative;
+    font-size: var(--font-size-14);
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.example-section__link {
+    width: 100%;
+    max-width: 471px;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.example-section__link a {
+    color: var(--color-crimson);
+    text-decoration: none;
+    font-size: var(--font-size-14);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.example-section__link a:hover {
+    color: var(--color-salmon);
+    text-decoration: underline;
+}
+
+.example-section__image {
+    height: 267px;
+    width: 100%;
+    max-width: 533px;
+    position: relative;
+    object-fit: cover;
 }
 
 /* お問い合わせセクション */
