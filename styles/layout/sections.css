@@ -108,6 +108,50 @@
     max-width: 1200px;
 }
 
+/* 取り組みセクション - PCリンク */
+.initiative-section__link {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.initiative-section__link a {
+    color: var(--color-black);
+    text-decoration: none;
+    font-size: var(--font-size-16);
+    font-weight: 600;
+    font-family: var(--font-lato);
+    transition: color 0.3s ease;
+    border-bottom: 1px solid var(--color-black);
+}
+
+.initiative-section__link a:hover {
+    text-decoration: underline;
+}
+
+/* 取り組みセクション - Mobileリンク */
+.initiative-card__mobile-link {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    display: none;
+}
+
+.initiative-card__mobile-link a {
+    color: var(--color-black);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: var(--font-lato);
+    transition: color 0.3s ease;
+    border-bottom: 1px solid var(--color-black);
+}
+
+.initiative-card__mobile-link a:hover {
+    text-decoration: underline;
+}
+
 /* サービスセクション */
 .service-section {
     width: 100%;
