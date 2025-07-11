@@ -215,17 +215,17 @@
     }
     
     .contact-section__text {
-        text-align: center;
-        align-items: center;
+        text-align: left;
+        align-items: flex-start;
     }
     
     .contact-section__title {
-        text-align: center;
+        text-align: left;
     }
     
     .contact-section__description {
         margin-bottom: 10px;
-        text-align: center;
+        text-align: left;
     }
     
     .form__name-group {
