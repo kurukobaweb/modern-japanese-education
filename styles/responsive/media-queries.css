@@ -412,16 +412,43 @@
     }
 }
 
-/* Ultra Small Mobile (390px以下) - iPhone 15対応 */
-@media screen and (max-width: 390px) {
+/* iPhone 16対応 (395px以下) */
+@media screen and (max-width: 395px) {
     .footer__content {
-        padding: 0 8px;
-        gap: 6px;
+        justify-content: flex-start;
+        gap: 8px;
+        padding: 0 5px;
+    }
+    
+    .footer__address {
+        flex: 0 0 90px;
+        min-width: 90px;
     }
     
     .footer__service {
-        padding-right: 8px;
-        min-width: 100px;
+        flex: 1;
+        min-width: 80px;
+        padding-left: 5px;
+    }
+}
+
+/* Ultra Small Mobile (390px以下) - iPhone 15対応 */
+@media screen and (max-width: 390px) {
+    .footer__content {
+        justify-content: flex-start;
+        gap: 6px;
+        padding: 0 3px;
+    }
+    
+    .footer__address {
+        flex: 0 0 80px;
+        min-width: 80px;
+    }
+    
+    .footer__service {
+        flex: 1;
+        min-width: 70px;
+        padding-left: 3px;
     }
     
     .footer__service-links {
