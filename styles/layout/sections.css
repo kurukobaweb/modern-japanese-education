@@ -81,7 +81,7 @@
     flex-direction: column;
     align-items: center;
     padding: 63px 165px;
-    gap: 63px;
+    gap: 30px;
     font-size: var(--font-size-36);
     color: var(--color-black);
 }
@@ -112,8 +112,8 @@
 .initiative-section__link {
     width: 100%;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .initiative-section__link a {
@@ -134,7 +134,7 @@
 .initiative-card__mobile-link {
     width: 100%;
     text-align: center;
-    margin-top: 15px;
+    margin-bottom: 30px;
     display: none;
 }
 
