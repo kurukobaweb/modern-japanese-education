@@ -238,6 +238,13 @@
         max-width: none;
         width: 100%;
         padding: 0 31px;
+        margin: 2px 0;
+    }
+    
+    .form__name-container {
+        height: auto;
+        overflow: visible;
+        padding-top: 5px;
     }
     
     .btn-submit {
