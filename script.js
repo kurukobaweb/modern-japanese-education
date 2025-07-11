@@ -166,7 +166,7 @@ ${inquiryContent.value.trim()}
             // mailto URLを作成
             const subject = encodeURIComponent('Webサイトからのお問い合わせ');
             const body = createEmailBody();
-            const mailtoUrl = `mailto:education_jp@modern.co.jp?subject=${subject}&body=${body}`;
+            const mailtoUrl = `mailto:m-ogawa@modern.co.jp?subject=${subject}&body=${body}`;
 
             // メールソフトを起動
             window.location.href = mailtoUrl;
