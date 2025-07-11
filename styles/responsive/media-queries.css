@@ -408,29 +408,13 @@
 /* Ultra Small Mobile (390px以下) - iPhone 15対応 */
 @media screen and (max-width: 390px) {
     .footer__content {
-        padding: 0 10px;
-        gap: 10px;
-    }
-    
-    .footer__service {
-        padding-right: 12px;
-    }
-    
-    .footer__service-links {
-        font-size: 11px;
-        line-height: 150%;
-    }
-}
-
-/* Compact Mobile (360px以下) */
-@media screen and (max-width: 360px) {
-    .footer__content {
         padding: 0 8px;
-        gap: 8px;
+        gap: 6px;
     }
     
     .footer__service {
-        padding-right: 15px;
+        padding-right: 8px;
+        min-width: 100px;
     }
     
     .footer__service-links {
@@ -438,9 +422,33 @@
         line-height: 140%;
     }
     
+    .footer__service-links a {
+        display: inline-block;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+    }
+}
+
+/* Compact Mobile (360px以下) */
+@media screen and (max-width: 360px) {
+    .footer__content {
+        padding: 0 5px;
+        gap: 4px;
+    }
+    
+    .footer__service {
+        padding-right: 10px;
+        min-width: 90px;
+    }
+    
+    .footer__service-links {
+        font-size: 9px;
+        line-height: 130%;
+    }
+    
     .footer__address,
     .footer__service {
-        min-width: 100px;
+        min-width: 90px;
     }
 }
 
@@ -448,14 +456,15 @@
 @media screen and (max-width: 320px) {
     .footer__content {
         padding: 0 5px;
-        gap: 5px;
+        gap: 10px;
         flex-direction: column;
         text-align: center;
     }
     
     .footer__service {
-        padding-right: 18px;
+        padding-right: 5px;
         text-align: center;
+        width: 100%;
     }
     
     .footer__service-links {
@@ -468,7 +477,7 @@
     .footer__service {
         min-width: auto;
         width: 100%;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
     
     .footer__address-text,
