@@ -134,6 +134,15 @@
         max-width: 350px;
     }
     
+    /* テキストリンクの表示切り替え */
+    .initiative-section__link {
+        display: none;
+    }
+    
+    .initiative-card__mobile-link {
+        display: block !important;
+    }
+    
     /* サービスセクション モバイル調整 */
     .service-section__grid {
         flex-direction: column;
