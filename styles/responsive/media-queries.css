@@ -17,6 +17,11 @@
         padding-left: 81px;
         padding-right: 81px;
     }
+    
+    /* MacBook Air 13インチ対応 - 実例セクションの間隔調整 */
+    .example-section {
+        gap: 60px;
+    }
 }
 
 /* Desktop (1050px以下) */
