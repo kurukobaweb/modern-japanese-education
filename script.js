@@ -7,7 +7,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const lastName = document.getElementById('lastName');
     const firstName = document.getElementById('firstName');
     const inquiryContent = document.getElementById('inquiryContent');
-    const submitButton = document.querySelector('.submit-buttons');
+    
+    // 正しいセレクターに修正
+    const submitButton = document.querySelector('.btn-submit');
+
+    // 要素の存在確認
+    if (!form || !submitButton) {
+        console.error('フォーム要素が見つかりません');
+        return;
+    }
 
     // プレースホルダーの初期値を保存
     const placeholders = {
@@ -57,11 +65,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // 入力フィールドのエラー状態をクリアする関数
     function clearFieldError(field) {
         field.classList.remove('error');
+        // 親要素のエラースタイルもクリア
+        field.parentElement.classList.remove('error');
     }
 
     // 入力フィールドにエラー状態を設定する関数
     function setFieldError(field) {
         field.classList.add('error');
+        // 親要素にもエラースタイルを適用
+        field.parentElement.classList.add('error');
     }
 
     // 全フィールドのバリデーションを行う関数
@@ -131,31 +143,8 @@ ${inquiryContent.value.trim()}
         return encodeURIComponent(body);
     }
 
-    // 各入力フィールドにフォーカス時のイベントリスナーを追加
-    [companyName, companyEmail, phoneNumber, lastName, firstName, inquiryContent].forEach(field => {
-        field.addEventListener('focus', function() {
-            clearFieldError(this);
-        });
-
-        field.addEventListener('input', function() {
-            if (this.classList.contains('error') && this.value.trim()) {
-                clearFieldError(this);
-            }
-        });
-    });
-
-    // メールアドレスフィールドにリアルタイムバリデーションを追加
-    companyEmail.addEventListener('blur', function() {
-        const email = this.value.trim();
-        if (email && !validateEmail(email)) {
-            setFieldError(this);
-        }
-    });
-
-    // フォーム送信処理
-    submitButton.addEventListener('click', function(e) {
-        e.preventDefault(); // デフォルトの送信動作を防ぐ
-
+    // フォームを送信する関数
+    function submitForm() {
         // バリデーションチェック
         if (!validateForm()) {
             // エラーがある場合は処理を中断
@@ -182,12 +171,49 @@ ${inquiryContent.value.trim()}
             console.error('送信エラー:', error);
             alert('送信中にエラーが発生しました。もう一度お試しください。');
         }
+    }
+
+    // 各入力フィールドにフォーカス時のイベントリスナーを追加
+    [companyName, companyEmail, phoneNumber, lastName, firstName, inquiryContent].forEach(field => {
+        field.addEventListener('focus', function() {
+            clearFieldError(this);
+        });
+
+        field.addEventListener('input', function() {
+            if (this.classList.contains('error') && this.value.trim()) {
+                clearFieldError(this);
+            }
+        });
     });
 
-    // Enterキーでのフォーム送信を防ぐ（textareaは除く）
+    // メールアドレスフィールドにリアルタイムバリデーションを追加
+    companyEmail.addEventListener('blur', function() {
+        const email = this.value.trim();
+        if (email && !validateEmail(email)) {
+            setFieldError(this);
+        }
+    });
+
+    // 送信ボタンのイベントリスナー
+    submitButton.addEventListener('click', function(e) {
+        e.preventDefault(); // デフォルトの送信動作を防ぐ
+        submitForm();
+    });
+
+    // フォーム送信イベントのリスナー（Enterキー対応）
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // デフォルトの送信動作を防ぐ
+        submitForm();
+    });
+
+    // Enterキーでのフォーム送信制御（textareaは除く）
     form.addEventListener('keydown', function(e) {
         if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA') {
             e.preventDefault();
+            // 送信ボタンの場合は送信実行
+            if (e.target.classList.contains('btn-submit')) {
+                submitForm();
+            }
         }
     });
 
@@ -223,19 +249,21 @@ document.addEventListener('DOMContentLoaded', function() {
         const shortTextSpan = description.querySelector('.short-text');
         const fullTextSpan = description.querySelector('.full-text');
         
-        readMoreBtn.addEventListener('click', function() {
-            if (fullTextSpan.classList.contains('hidden')) {
-                // 全文表示
-                shortTextSpan.style.display = 'none';
-                fullTextSpan.classList.remove('hidden');
-                readMoreBtn.textContent = '閉じる';
-            } else {
-                // 短縮表示
-                shortTextSpan.style.display = 'inline';
-                fullTextSpan.classList.add('hidden');
-                readMoreBtn.textContent = '続きを読む';
-            }
-        });
+        if (readMoreBtn && shortTextSpan && fullTextSpan) {
+            readMoreBtn.addEventListener('click', function() {
+                if (fullTextSpan.classList.contains('hidden')) {
+                    // 全文表示
+                    shortTextSpan.style.display = 'none';
+                    fullTextSpan.classList.remove('hidden');
+                    readMoreBtn.textContent = '閉じる';
+                } else {
+                    // 短縮表示
+                    shortTextSpan.style.display = 'inline';
+                    fullTextSpan.classList.add('hidden');
+                    readMoreBtn.textContent = '続きを読む';
+                }
+            });
+        }
     }
     
     // ウィンドウリサイズ時の再初期化
@@ -243,7 +271,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if (window.innerWidth > 750) {
             // PC表示時は全文表示に戻す
             if (description) {
-                description.innerHTML = description.querySelector('.full-text')?.textContent || description.textContent;
+                const fullTextElement = description.querySelector('.full-text');
+                if (fullTextElement) {
+                    description.innerHTML = fullTextElement.textContent;
+                }
             }
         }
     });
