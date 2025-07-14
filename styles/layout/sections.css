@@ -280,6 +280,19 @@
     margin-top: 10px;
 }
 
+.example-section__notice {
+    width: 100%;
+    max-width: 471px;
+    position: relative;
+    font-size: var(--font-size-16);
+    font-weight: 400;
+    text-align: center;
+    display: inline-block;
+    margin-top: 15px;
+    line-height: 150%;
+    color: inherit;
+}
+
 .example-section__link {
     width: 100%;
     max-width: 471px;
@@ -363,12 +376,4 @@
     text-align: justify;
     display: inline-block;
     margin-top: -11px;
-}
-
-.example-section__image {
-    height: 267px;
-    width: 100%;
-    max-width: 533px;
-    position: relative;
-    object-fit: cover;
 }
