@@ -233,6 +233,7 @@
     align-items: center;
     justify-content: flex-start;
     gap: var(--gap-24);
+    flex-shrink: 0;
 }
 
 .example-section__status {
@@ -322,6 +323,7 @@
     max-width: 533px;
     position: relative;
     object-fit: cover;
+    flex-shrink: 0;
 }
 
 /* お問い合わせセクション */
