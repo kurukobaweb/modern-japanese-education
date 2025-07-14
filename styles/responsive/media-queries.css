@@ -21,6 +21,18 @@
     /* MacBook Air 13インチ対応 - 実例セクションの間隔調整 */
     .example-section {
         gap: 60px;
+        /* Safari対応: gapの代替手法 */
+        justify-content: space-between;
+    }
+    
+    /* Safari用の追加設定 */
+    .example-section__text {
+        margin-right: 60px;
+    }
+    
+    /* Safari用：画像側の調整 */
+    .example-section__image {
+        flex-shrink: 0;
     }
 }
 
