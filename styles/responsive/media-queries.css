@@ -197,6 +197,7 @@
     .example-section__image {
         order: 2;
         margin-top: 20px;
+        height: 259px;
     }
     
     .example-section__description {
