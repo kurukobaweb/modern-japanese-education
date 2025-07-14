@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <button class="read-more-btn" style="
                 background: none;
                 border: none;
-                color: #dc143c;
+                color: #121111;
                 cursor: pointer;
                 font-size: 14px;
                 font-weight: 600;
