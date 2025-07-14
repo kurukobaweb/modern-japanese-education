@@ -19,8 +19,11 @@
     }
     
     /* MacBook Air 13インチ対応 - 実例セクションの間隔調整 */
-    .example-section {
-        justify-content: space-between;
+    /* .example-section { justify-content: space-between; } を削除 */
+    
+    /* 実例セクションのマージン調整 */
+    .example-section__text {
+        margin-right: 40px; /* レスポンシブ時のマージン調整 */
     }
 }
 
@@ -197,6 +200,7 @@
         max-width: none;
         margin-bottom: 20px;
         order: 1;
+        margin-right: 0; /* モバイルではマージンをリセット */
     }
     
     .example-section__image {
