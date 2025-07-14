@@ -234,6 +234,8 @@
     justify-content: flex-start;
     gap: var(--gap-24);
     flex-shrink: 0;
+    min-width: 0; /* flexboxのバグ回避 */
+    margin-right: 60px; /* 最小マージンを確保 */
 }
 
 .example-section__status {
@@ -324,6 +326,7 @@
     position: relative;
     object-fit: cover;
     flex-shrink: 0;
+    min-width: 0; /* flexboxのバグ回避 */
 }
 
 /* お問い合わせセクション */
