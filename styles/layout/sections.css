@@ -188,7 +188,7 @@
     flex-wrap: wrap; /* 小画面で折り返すようにする */
     align-items: stretch; /* カードの高さを揃える */
     justify-content: center;
-    gap: 38px; /* カード間のマージンを38pxに統一 */
+    gap: 27px; 
     font-size: var(--font-size-100);
     color: var(--color-gray-500);
 }
