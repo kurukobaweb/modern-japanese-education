@@ -103,14 +103,14 @@
 
 .service-card__content {
     width: 216px;
-    height: 100px; /* 高さを固定して揃える */
+    height: 83px;
     overflow: hidden;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* 内部のテキストを中央揃えにする */
-    gap: 6px; /* タイトルと説明文の間の隙間を調整 */
+    justify-content: flex-start;
+    gap: 3px;
     font-size: var(--font-size-18);
     color: var(--color-gray-300);
 }
@@ -147,7 +147,25 @@
 .service-card--lms .service-card__icon,
 .service-card--textbook .service-card__icon,
 .service-card--chatbot .service-card__icon {
-    margin-top: -20px; /* margin-topの値を調整 */
+    margin-top: -70px;
+}
+
+/* サービスカード個別調整 */
+.service-card--app .service-card__icon-container,
+.service-card--lms .service-card__icon-container,
+.service-card--textbook .service-card__icon-container,
+.service-card--chatbot .service-card__icon-container {
+    width: 117px;
+    height: auto;
+    min-height: 100px;
+    margin-bottom: 0;
+}
+
+.service-card--app .service-card__icon,
+.service-card--lms .service-card__icon,
+.service-card--textbook .service-card__icon,
+.service-card--chatbot .service-card__icon {
+    margin-top: -70px;
 }
 
 .service-card--app .service-card__content,
@@ -155,8 +173,8 @@
 .service-card--textbook .service-card__content,
 .service-card--chatbot .service-card__content {
     width: 216px;
-    height: 100px; /* 統一した高さを適用 */
-    min-height: auto; /* min-height指定を削除 */
-    margin-top: 0;  /* マイナスのマージンを削除 */
-    justify-content: center; /* 中央揃えを適用 */
+    height: auto;
+    min-height: 60px;
+    margin-top: -10px;
+    justify-content: flex-start;
 }
