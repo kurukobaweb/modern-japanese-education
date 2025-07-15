@@ -84,7 +84,7 @@
 .service-card .number-display {
     position: absolute;
     top: 10px;
-    left: 0px;
+    left: 20px;
     z-index: 1;
     margin: 0;
     font-size: var(--font-size-100);
