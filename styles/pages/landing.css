@@ -40,9 +40,7 @@ html {
 }
 
 /* パフォーマンス最適化 */
-.landing-page img {
-    loading: lazy;
-}
+/* Note: 画像の遅延読み込みはHTMLの loading="lazy" 属性を使用してください */
 
 /* アクセシビリティ: 高コントラストモード対応 */
 @media (prefers-contrast: high) {
