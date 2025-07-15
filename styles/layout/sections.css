@@ -182,13 +182,13 @@
 
 .service-section__grid {
     width: 100%;
-    max-width: 1102px;
+    max-width: 1134px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap; /* 小画面で折り返すようにする */
     align-items: stretch; /* カードの高さを揃える */
     justify-content: center;
-    gap: 27px; 
+    gap: 38px; 
     font-size: var(--font-size-100);
     color: var(--color-gray-500);
 }
