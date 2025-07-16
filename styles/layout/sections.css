@@ -210,8 +210,8 @@
 }
 /* 実例セクション - ロゴ追加 */
 .example-section__logo {
-    width: 270px;
-    height: 46px;
+    width: 275px;
+    height: 44px;
     margin: 30px auto 15px; /* 上30px、下15px */
     display: block;
     object-fit: contain;
