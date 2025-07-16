@@ -69,74 +69,112 @@
 
 /* サービスカード */
 .service-card {
+    height: 226px;
     width: 255px;
-    height: 240px;
     background-color: var(--color-white);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 20px 20px 20px 19px;
-    position: relative;
-}
-
-/* 番号表示を絶対配置に変更 */
-.service-card .number-display {
-    position: absolute;
-    top: 10px;
-    left: 35px;
-    z-index: 1;
-    margin: 0;
-    font-size: var(--font-size-100);
-    font-weight: 700;
-    font-family: inherit;
-    color: var(--color-gray-500);
-    opacity: 0.3;
+    padding: 0 var(--padding-20) 0 var(--padding-19);
+    gap: var(--gap-4);
 }
 
 .service-card__icon-container {
-    width: 100%;
-    height: 100px;
+    width: 117px;
+    height: auto;
+    min-height: 120px;
+    overflow: visible;
+    flex-shrink: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 10px;
 }
 
 .service-card__icon {
     width: 107.6px;
-    height: auto;
-    max-height: 80px;
-    object-fit: contain;
     position: relative;
-    z-index: 2;
+    max-height: 100%;
+    object-fit: cover;
+    margin-top: -20px;
 }
 
 .service-card__content {
-    width: 100%;
-    flex: 1;
+    width: 216px;
+    height: 83px;
+    overflow: hidden;
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 8px;
-    text-align: center;
+    gap: 3px;
+    font-size: var(--font-size-18);
+    color: var(--color-gray-300);
 }
 
 .service-card__title {
     margin: 0;
-    font-size: var(--font-size-18);
+    position: relative;
+    font-size: inherit;
     font-weight: 700;
-    font-family: var(--font-lato);
-    color: var(--color-gray-300);
-    line-height: 1.3;
+    font-family: inherit;
 }
 
 .service-card__description {
-    width: 100%;
-    max-width: 191px;
+    width: 191px;
+    position: relative;
     font-size: var(--font-size-12);
     color: var(--color-black);
-    line-height: 1.5;
+    display: inline-block;
     margin: 0;
+}
+
+/* サービスカード個別調整 */
+.service-card--app .service-card__icon-container,
+.service-card--lms .service-card__icon-container,
+.service-card--textbook .service-card__icon-container,
+.service-card--chatbot .service-card__icon-container {
+    width: 117px;
+    height: auto;
+    min-height: 100px;
+    margin-bottom: 0;
+}
+
+.service-card--app .service-card__icon,
+.service-card--lms .service-card__icon,
+.service-card--textbook .service-card__icon,
+.service-card--chatbot .service-card__icon {
+    margin-top: -70px;
+}
+
+/* サービスカード個別調整 */
+.service-card--app .service-card__icon-container,
+.service-card--lms .service-card__icon-container,
+.service-card--textbook .service-card__icon-container,
+.service-card--chatbot .service-card__icon-container {
+    width: 117px;
+    height: auto;
+    min-height: 100px;
+    margin-bottom: 0;
+}
+
+.service-card--app .service-card__icon,
+.service-card--lms .service-card__icon,
+.service-card--textbook .service-card__icon,
+.service-card--chatbot .service-card__icon {
+    margin-top: -70px;
+}
+
+.service-card--app .service-card__content,
+.service-card--lms .service-card__content,
+.service-card--textbook .service-card__content,
+.service-card--chatbot .service-card__content {
+    width: 216px;
+    height: auto;
+    min-height: 60px;
+    margin-top: -10px;
+    justify-content: flex-start;
 }
