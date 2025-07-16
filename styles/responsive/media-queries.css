@@ -164,13 +164,15 @@
         height: 220px;
         margin: 0 auto;
         padding: 20px;
+        display: flex;
+    　　flex-direction: column;  
+        justify-content: center; 
+        align-items: center; 
     }
     
     /* 番号表示のモバイル調整 */
     .service-card .number-display {
         font-size: 80px;
-        top: 5px;
-        left: 35px;
     }
     
     .service-card__icon-container {
