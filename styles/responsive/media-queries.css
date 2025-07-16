@@ -159,25 +159,37 @@
     }
     
     .service-card {
-    width: 100%;
-    max-width: 300px;
-    height: 220px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center;
+        width: 100%;
+        max-width: 300px;
+        height: 220px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative; /* 背景番号の基準点として設定 */
     }
+    
+    /* ▼▼▼ PC表示崩れの原因だった閉じ括弧を削除しました ▼▼▼
+    } 
+    */
     
     /* 番号表示のモバイル調整 */
     .service-card .number-display {
         font-size: 80px;
+        /* ▼▼▼ 背景として中央に配置するためのスタイルを追加 ▼▼▼ */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0; /* 最背面に配置 */
     }
     
     .service-card__icon-container {
         height: 80px;
         margin-bottom: 10px;
+        z-index: 1; /* 番号より手前に配置 */
     }
     
     .service-card__icon {
@@ -186,6 +198,7 @@
     
     .service-card__content {
         gap: 6px;
+        z-index: 1; /* 番号より手前に配置 */
     }
     
     .service-card__title {
