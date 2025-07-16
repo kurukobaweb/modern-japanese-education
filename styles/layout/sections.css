@@ -208,7 +208,15 @@
     color: var(--color-white);
     font-family: var(--font-lato);
 }
-
+/* 実例セクション - ロゴ追加 */
+.example-section__logo {
+    width: 270px;
+    height: 46px;
+    margin: 30px auto 15px; /* 上30px、下15px */
+    display: block;
+    object-fit: contain;
+    position: relative;
+}
 .example-section__text {
     height: auto;
     min-height: 195px;
