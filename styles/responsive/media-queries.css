@@ -165,10 +165,9 @@
     margin: 0 auto;
     padding: 20px;
     display: flex;
-    flex-direction: column;   /* 子要素を縦に並べる */
-    justify-content: center;  /* 垂直方向の中央揃え */
-    align-items: center;      /* 水平方向の中央揃え */
-}
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
     }
     
     /* 番号表示のモバイル調整 */
