@@ -212,7 +212,7 @@
 .example-section__logo {
     width: 275px;
     height: 44px;
-    margin: 30px auto 15px; /* 上30px、下15px */
+    margin: 30px auto 8px; 
     display: block;
     object-fit: contain;
     position: relative;
@@ -274,7 +274,7 @@
     font-weight: 600;
     text-align: center;
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .example-section__notice {
