@@ -217,7 +217,24 @@
     .example-section__status h3 {
         font-size: 20px;
     }
-    
+   
+/* Tablet (750px以下) に追加 */
+@media screen and (max-width: 750px) {
+    .example-section__logo {
+        width: 100%;
+        max-width: 270px;
+        height: auto;
+        margin: 30px auto 15px; /* マージンは維持 */
+    }
+}
+
+/* Mobile (450px以下) に追加 - 必要に応じて */
+@media screen and (max-width: 450px) {
+    .example-section__logo {
+        max-width: 240px; /* 画面幅に応じて調整 */
+    }
+}  
+   
     /* お問い合わせセクション モバイル調整 */
     .contact-section {
         gap: 40px;
