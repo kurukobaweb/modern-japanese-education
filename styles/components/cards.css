@@ -88,8 +88,8 @@
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     /* margin-bottom: 10px; 削除 */
 }
 
@@ -129,15 +129,6 @@
     color: var(--color-black);
     display: inline-block;
     margin: 0;
-}
-
-/* サービスカード個別調整 */
-.service-card--textbook .service-card__icon-container,
-.service-card--chatbot .service-card__icon-container {
-    width: 117px;
-    height: auto;
-    min-height: 100px;
-    /* margin-bottom: 0; 削除 */
 }
 
 .service-card--app .service-card__icon,
