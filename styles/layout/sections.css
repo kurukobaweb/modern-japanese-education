@@ -186,7 +186,7 @@
     height: 226px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start; /* 修正: center から flex-start に変更 */
     justify-content: center;
     gap: 14px;
     font-size: var(--font-size-100);
@@ -222,15 +222,17 @@
     color: var(--color-white);
     font-family: var(--font-lato);
 }
+
 /* 実例セクション - ロゴ追加 */	
 .example-section__logo {	
-width: 275px;	
-height: 44px;	
-margin: 30px auto 8px;	
-display: block;	
-object-fit: contain;	
-position: relative;	
+    width: 275px;	
+    height: 44px;	
+    margin: 30px auto 8px;	
+    display: block;	
+    object-fit: contain;	
+    position: relative;	
 }
+
 .example-section__text {
     height: auto;
     min-height: 195px;
