@@ -75,9 +75,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;15
+    justify-content: flex-start;
     padding: 0 var(--padding-20) ;
-    gap: 15px; /* アイコンとテキスト間の余白を再調整 */
+    gap: 15px;
 }
 
 .service-card__icon-container {
@@ -90,7 +90,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* margin-bottom: 10px; 削除 */
 }
 
 .service-card__icon {
@@ -129,22 +128,4 @@
     color: var(--color-black);
     display: inline-block;
     margin: 0;
-}
-
-.service-card--app .service-card__icon,
-.service-card--lms .service-card__icon,
-.service-card--textbook .service-card__icon,
-.service-card--chatbot .service-card__icon {
-    margin-top: -70px;
-}
-
-.service-card--app .service-card__content,
-.service-card--lms .service-card__content,
-.service-card--textbook .service-card__content,
-.service-card--chatbot .service-card__content {
-    width: 216px;
-    height: auto;
-    min-height: 60px;
-    /* margin-top: -10px; 削除 */
-    justify-content: flex-start;
 }
