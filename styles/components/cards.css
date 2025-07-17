@@ -76,14 +76,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 0 var(--padding-19);
+    padding: 0 var(--padding-20) 0 var(--padding-19);
     gap: var(--gap-4);
 }
 
 .service-card__icon-container {
     width: 117px;
     height: auto;
-    min-height: 120px;
+    min-height: 50px;
     overflow: visible;
     flex-shrink: 0;
     display: flex;
@@ -98,7 +98,7 @@
     position: relative;
     max-height: 100%;
     object-fit: cover;
-    margin-top: -70px; /* 修正: テキスト表示領域を確保するため、-70pxに統一 */
+    margin-top: -70px;
 }
 
 .service-card__content {
@@ -110,7 +110,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 8px; /* 修正: 見出しと説明文の間の余白を8pxに統一 */
+    gap: 3px;
     font-size: var(--font-size-18);
     color: var(--color-gray-300);
 }
@@ -131,5 +131,3 @@
     display: inline-block;
     margin: 0;
 }
-
-/* サービスカード個別調整（すべて削除） */
