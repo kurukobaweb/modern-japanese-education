@@ -75,15 +75,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding: 0 var(--padding-20) 0 var(--padding-19);
-    gap: 20px; /* 修正: gapを追加して余白を統一 */
+    justify-content: flex-start;15
+    padding: 0 var(--padding-20) ;
+    gap: 15px; /* アイコンとテキスト間の余白を再調整 */
 }
 
 .service-card__icon-container {
     width: 117px;
     height: auto;
-    min-height: 120px;
+    min-height: 100px;
     overflow: visible;
     flex-shrink: 0;
     display: flex;
@@ -98,19 +98,18 @@
     position: relative;
     max-height: 100%;
     object-fit: cover;
-    margin-top: -20px;
 }
 
 .service-card__content {
     width: 216px;
-    height: 83px;
+    height: auto;
     overflow: hidden;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 3px;
+    gap: 8px;
     font-size: var(--font-size-18);
     color: var(--color-gray-300);
 }
@@ -133,8 +132,6 @@
 }
 
 /* サービスカード個別調整 */
-.service-card--app .service-card__icon-container,
-.service-card--lms .service-card__icon-container,
 .service-card--textbook .service-card__icon-container,
 .service-card--chatbot .service-card__icon-container {
     width: 117px;
