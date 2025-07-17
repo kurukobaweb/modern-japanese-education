@@ -183,12 +183,26 @@
 .service-section__grid {
     width: 100%;
     max-width: 1102px;
+    height: 226px;
     display: flex;
     flex-direction: row;
-    align-items: stretch;
+    align-items: center;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 14px;
+    font-size: var(--font-size-100);
+    color: var(--color-gray-500);
+}
+
+.service-section__column {
+    width: 532px;
+    height: 226px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 38px;
 }
 
 /* 実例セクション */
@@ -208,14 +222,14 @@
     color: var(--color-white);
     font-family: var(--font-lato);
 }
-/* 実例セクション - ロゴ追加 */
-.example-section__logo {
-    width: 275px;
-    height: 44px;
-    margin: 30px auto 8px; 
-    display: block;
-    object-fit: contain;
-    position: relative;
+/* 実例セクション - ロゴ追加 */	
+.example-section__logo {	
+width: 275px;	
+height: 44px;	
+margin: 30px auto 8px;	
+display: block;	
+object-fit: contain;	
+position: relative;	
 }
 .example-section__text {
     height: auto;
@@ -274,7 +288,7 @@
     font-weight: 600;
     text-align: center;
     display: inline-block;
-    margin-top: -20px;
+    margin-top: 10px;
 }
 
 .example-section__notice {
