@@ -339,7 +339,38 @@
         gap: var(--gap-30);
     }
 }
-
+ /* コラムセクション モバイル調整 */
+    .column-section {
+        flex-direction: column;
+        padding: 61px 41px;
+        gap: 30px;
+    }
+    
+    .column-section__left,
+    .column-section__right {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+    
+    .column-section__title {
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .column-section__subtitle {
+        text-align: center;
+    }
+    
+    .column-section__text {
+        text-align: left;
+    }
+    
+    .column-section__link {
+        text-align: center;
+        display: block;
+    }
+}
 /* Mobile (450px以下) */
 @media screen and (max-width: 450px) {
     .service-card__content {
