@@ -443,6 +443,7 @@
     font-weight: 600;
     color: var(--color-black);
     font-family: var(--font-lato);
+    margin-bottom: 10px; 
 }
 
 .column-section__text {
@@ -451,6 +452,7 @@
     line-height: 150%;
     color: var(--color-black);
     font-family: var(--font-lato);
+    margin-bottom: 10px; 
 }
 
 .column-section__link {
