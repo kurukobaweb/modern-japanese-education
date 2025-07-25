@@ -406,20 +406,40 @@
 }
 
 .cta-button {
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background: #FEE100;
     color: #081A4B;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 18px 48px;
+    padding: 24px 48px;
     border-radius: 9999px;
     text-decoration: none;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
     white-space: nowrap;
     font-family: var(--font-lato);
+    gap: 4px;
+}
+
+.cta-button__main {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.cta-button__sub {
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--color-gray-300); /* #666666 */
+    line-height: 1.2;
+    transition: color 0.2s ease;
 }
 
 .cta-button:hover {
     transform: translateY(-2px);
+}
+
+.cta-button:hover .cta-button__sub {
+    color: #081A4B;
 }
