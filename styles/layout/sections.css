@@ -392,3 +392,34 @@
     display: inline-block;
     margin-top: -11px;
 }
+
+/* CTAセクション */
+.cta-section {
+    width: 100%;
+    max-width: 1440px;
+    background-color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #FEE100;
+    color: #081A4B;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 18px 48px;
+    border-radius: 9999px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    white-space: nowrap;
+    font-family: var(--font-lato);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+}
