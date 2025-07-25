@@ -141,7 +141,30 @@
         width: 100%;
         max-width: 350px;
     }
-    
+　　/* Tablet (750px以下) に追加 */
+　　.cta-section {
+    　　padding: 60px 20px;
+　　}
+
+　　.cta-button {
+    　　font-size: 16px;
+   　　 padding: 18px 24px;
+　　}
+
+　　/* Mobile (450px以下) に追加 */
+　　.cta-section {
+    padding: 40px 20px;
+　　}
+
+.cta-button {
+    font-size: 16px;
+    padding: 18px 24px;
+    /* タップターゲット最小サイズ確保 */
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+　}    　
     /* テキストリンクの表示切り替え */
     .initiative-section__link {
         display: none;
