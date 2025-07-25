@@ -38,6 +38,10 @@ html {
 .landing-page > * + * {
     margin-top: 0;
 }
+/* コラムセクションの前の余白を削除 */
+.column-section {
+    margin-top: 0;
+}
 
 /* パフォーマンス最適化 */
 .landing-page img {
