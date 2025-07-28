@@ -467,3 +467,16 @@
 .column-section__link:hover {
     opacity: 0.7;
 }
+
+/* ... existing styles ... */
+.column-section__link:hover {
+    opacity: 0.7;
+}
+
+/* セクション間の区切り */
+.section-divider {
+    height: 30px;
+    background-color: var(--color-white);
+    width: 100%;
+    max-width: 1440px;
+}
