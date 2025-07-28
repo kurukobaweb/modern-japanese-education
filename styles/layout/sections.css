@@ -455,19 +455,6 @@
     margin-bottom: 10px; 
 }
 
-.column-section__link {
-    font-size: var(--font-size-16);
-    color: var(--color-cornflowerblue);
-    text-decoration: none;
-    transition: opacity 0.3s ease;
-    font-family: var(--font-lato);
-    display: inline-block;
-}
-
-.column-section__link:hover {
-    opacity: 0.7;
-}
-
 /* ... existing styles ... */
 .column-section__link:hover {
     opacity: 0.7;
@@ -479,4 +466,23 @@
     background-color: var(--color-white);
     width: 100%;
     max-width: 1440px;
+}
+
+/* Noteへのリンクボタンのスタイル */
+.column-section__note-btn {
+    display: inline-block;
+    background-color: var(--color-cornflowerblue); /* 指摘事項を反映: 変数を使用 */
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 16px 48px;
+    border-radius: 9999px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    text-align: center; /* テキストを中央揃え */
+}
+
+.column-section__note-btn:hover {
+    transform: translateY(-2px);
 }
