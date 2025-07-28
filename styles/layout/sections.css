@@ -473,7 +473,7 @@
     display: inline-block;
     background-color: var(--color-cornflowerblue); /* 指摘事項を反映: 変数を使用 */
     color: #ffffff;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     padding: 8px 24px;
     border-radius: 9999px;
