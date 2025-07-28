@@ -188,7 +188,7 @@
     flex-direction: row;
     align-items: flex-start; /* 修正: center から flex-start に変更 */
     justify-content: center;
-    gap: 31px;
+    gap: 14px;
     font-size: var(--font-size-100);
     color: var(--color-gray-500);
 }
