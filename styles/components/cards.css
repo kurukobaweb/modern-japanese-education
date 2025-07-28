@@ -82,7 +82,7 @@
 
 .service-card__icon-container {
     width: 117px;
-    height: 139px;
+    height: auto;
     min-height: 50px;
     overflow: visible;
     flex-shrink: 0;
@@ -90,6 +90,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    margin-bottom: 10px;
 }
 
 .service-card__icon {
