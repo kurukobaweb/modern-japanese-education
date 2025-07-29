@@ -148,10 +148,12 @@
     /* テキストリンクの表示切り替え */
     .initiative-section__link {
         display: none;
+        text-align: center;
     }
     
     .initiative-card__mobile-link {
         display: block !important;
+        text-align: center;
     }
     
     /* サービスセクション モバイル調整 */
