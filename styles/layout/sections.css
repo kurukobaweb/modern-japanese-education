@@ -123,11 +123,6 @@
     font-weight: 600;
     font-family: var(--font-lato);
     transition: color 0.3s ease;
-    border-bottom: 1px solid var(--color-black);
-}
-
-.initiative-section__link a:hover {
-    text-decoration: underline;
 }
 
 /* 取り組みセクション - Mobileリンク */
@@ -145,11 +140,6 @@
     font-weight: 600;
     font-family: var(--font-lato);
     transition: color 0.3s ease;
-    border-bottom: 1px solid var(--color-black);
-}
-
-.initiative-card__mobile-link a:hover {
-    text-decoration: underline;
 }
 
 /* サービスセクション */
