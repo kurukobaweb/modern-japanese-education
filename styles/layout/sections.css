@@ -462,7 +462,7 @@
 .column-section__note-btn {
     display: inline-block;
     background-color: var(--color-cornflowerblue); /* 指摘事項を反映: 変数を使用 */
-    color: #ffffff;
+    color: #000000;
     font-size: 14px;
     padding: 8px 24px;
     border-radius: 9999px;
@@ -474,4 +474,5 @@
 
 .column-section__note-btn:hover {
     transform: translateY(-2px);
+    color: #FFFFFF;
 }
