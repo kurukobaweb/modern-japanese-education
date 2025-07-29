@@ -205,7 +205,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 116px 165px;
+    padding: 50px 165px;
     gap: 0;
     text-align: left;
     font-size: var(--font-size-24);
