@@ -97,3 +97,28 @@
     background-color: var(--color-crimson);
     color: var(--color-white);
 }
+
+/* ==============================================
+   ボタンコンポーネント
+   ============================================== */
+
+/* ...既存のボタンスタイル... */
+
+/* 開発中サンプルボタン */
+.btn-sample {
+    display: inline-block;
+    background-color: #6495ed;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 24px;
+    border-radius: 9999px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.btn-sample:hover {
+    transform: translateY(-2px);
+    color: #ffffff; /* ホバー時も文字色を白に維持 */
+}
