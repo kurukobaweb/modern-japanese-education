@@ -50,8 +50,8 @@ $firstName = htmlspecialchars($firstName, ENT_QUOTES, 'UTF-8');
 $inquiryContent = htmlspecialchars($inquiryContent, ENT_QUOTES, 'UTF-8');
 
 // メール設定
-$to = 'm-ogawa@modern.co.jp';
-$subject = 'Webサイトからのお問い合わせ';
+$to = 'm-saito@modern.co.jp';
+$subject = '日本語学習ページからのお問い合わせ';
 
 // メール本文の作成
 $message = "
@@ -92,4 +92,5 @@ if (mail($to, $subject, $message, implode("\r\n", $headers))) {
         'message' => 'メール送信に失敗しました。しばらく時間をおいて再度お試しください。'
     ]);
 }
+
 ?>
