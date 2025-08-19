@@ -123,53 +123,69 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // mailto用のメール本文を作成する関数
-    function createEmailBody() {
-        const body = `
-お問い合わせ内容
-
-会社名: ${companyName.value.trim()}
-会社のメールアドレス: ${companyEmail.value.trim()}
-電話番号: ${phoneNumber.value.trim()}
-お名前: ${lastName.value.trim()} ${firstName.value.trim()}
-
-お問い合わせ内容:
-${inquiryContent.value.trim()}
-
----
-この問い合わせは、Webサイトのお問い合わせフォームから送信されました。
-        `.trim();
-        
-        return encodeURIComponent(body);
+    // ローディング状態を管理する関数
+    function setLoadingState(isLoading) {
+        if (isLoading) {
+            submitButton.disabled = true;
+            submitButton.querySelector('.btn-submit__text').textContent = '送信中...';
+            submitButton.style.opacity = '0.6';
+        } else {
+            submitButton.disabled = false;
+            submitButton.querySelector('.btn-submit__text').textContent = '送信する';
+            submitButton.style.opacity = '1';
+        }
     }
 
-    // フォームを送信する関数
-    function submitForm() {
+    // フォームデータを作成する関数
+    function createFormData() {
+        const formData = new FormData();
+        formData.append('companyName', companyName.value.trim());
+        formData.append('companyEmail', companyEmail.value.trim());
+        formData.append('phoneNumber', phoneNumber.value.trim());
+        formData.append('lastName', lastName.value.trim());
+        formData.append('firstName', firstName.value.trim());
+        formData.append('inquiryContent', inquiryContent.value.trim());
+        return formData;
+    }
+
+    // フォームを送信する関数（新しい実装）
+    async function submitForm() {
         // バリデーションチェック
         if (!validateForm()) {
-            // エラーがある場合は処理を中断
             return;
         }
 
+        // ローディング状態にセット
+        setLoadingState(true);
+
         try {
-            // mailto URLを作成
-            const subject = encodeURIComponent('Webサイトからのお問い合わせ');
-            const body = createEmailBody();
-            const mailtoUrl = `mailto:m-ogawa@modern.co.jp?subject=${subject}&body=${body}`;
+            // フォームデータを作成
+            const formData = createFormData();
 
-            // メールソフトを起動
-            window.location.href = mailtoUrl;
+            // サーバーにPOSTリクエストを送信
+            const response = await fetch('./send-mail.php', {
+                method: 'POST',
+                body: formData
+            });
 
-            // 成功メッセージを表示
-            setTimeout(() => {
-                alert('お問い合わせありがとうございます。');
-                // フォームをクリア
+            // レスポンスをJSONで解析
+            const result = await response.json();
+
+            if (result.success) {
+                // 送信成功
+                alert(result.message);
                 clearForm();
-            }, 500); // メールソフト起動後に少し遅延してメッセージ表示
+            } else {
+                // 送信失敗
+                alert('エラー: ' + result.message);
+            }
 
         } catch (error) {
             console.error('送信エラー:', error);
-            alert('送信中にエラーが発生しました。もう一度お試しください。');
+            alert('送信中にエラーが発生しました。ネットワーク接続を確認してもう一度お試しください。');
+        } finally {
+            // ローディング状態を解除
+            setLoadingState(false);
         }
     }
 
