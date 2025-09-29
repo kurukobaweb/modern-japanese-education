@@ -202,8 +202,8 @@
     background-color: var(--color-cornflowerblue);
     overflow: hidden;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     padding: 50px 165px;
     gap: 0;
@@ -213,7 +213,15 @@
     font-family: var(--font-lato);
     height: auto; /* 高さを可変に */
     min-height: 500px; /* 最小限の高さを確保 */
-    align-items: flex-start; /* 全文表示時に上揃えにする */
+   }
+
+   .example-section__main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 40px;
 }
 
 /* 実例セクション - ロゴ追加 */	
