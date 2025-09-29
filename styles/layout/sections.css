@@ -202,222 +202,61 @@
     background-color: var(--color-cornflowerblue);
     overflow: hidden;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* ▼▼▼ 修正 ▼▼▼ */
+    flex-direction: row;   /* 横並びを基本とする */
+    flex-wrap: wrap;       /* 要素がはみ出たら折り返すようにする */
+    align-items: flex-start; /* 上揃え */
     justify-content: space-between;
+    /* ▲▲▲ 修正 ▲▲▲ */
     padding: 50px 165px;
-    gap: 0;
+    gap: 40px;
     text-align: left;
     font-size: var(--font-size-24);
     color: var(--color-white);
     font-family: var(--font-lato);
-    height: auto; /* 高さを可変に */
-    min-height: 500px; /* 最小限の高さを確保 */
-   }
-
-   .example-section__main-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    gap: 40px;
-}
-
-/* 実例セクション - ロゴ追加 */	
-.example-section__logo {	
-    width: 275px;	
-    height: 44px;	
-    margin: 0px auto 8px;	
-    display: block;	
-    object-fit: contain;	
-    position: relative;	
+    height: auto;
+    min-height: 500px;
 }
 
 .example-section__text {
     height: auto;
     min-height: 195px;
-    width: 100%;
-    max-width: 471px;
+    /* ▼▼▼ 修正 ▼▼▼ */
+    flex: 1; /* 横幅の比率を指定 */
+    min-width: 450px; /* 最小幅を指定 */
+    /* ▲▲▲ 修正 ▲▲▲ */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     gap: var(--gap-24);
     flex-shrink: 0;
-    min-width: 0; /* flexboxのバグ回避 */
-    margin-right: 60px; /* 最小マージンを確保 */
-}
-
-.example-section__status {
-    width: 100%;
-    max-width: 471px;
-    position: relative;
-    font-weight: 600;
-    display: inline-block;
-    text-align: center;
-}
-
-.example-section__status h3 {
-    margin: 0;
-    font-size: var(--font-size-24);
-    font-weight: 600;
-    font-family: inherit;
-    margin-bottom: 8px;
-}
-
-.example-section__title {
-    margin: 0;
-    font-size: var(--font-size-36);
-    font-weight: 700;
-    font-family: inherit;
-}
-
-.example-section__description {
-    width: 100%;
-    max-width: 471px;
-    position: relative;
-    font-size: var(--font-size-16);
-    line-height: 140%;
-    text-align: justify;
-    display: inline-block;
-}
-
-.btn-sample--white {
-    margin-top: 20px;
-    margin-bottom: 0px;
-}
-
-.example-section__author {
-    width: 100%;
-    max-width: 471px;
-    position: relative;
-    font-size: var(--font-size-14);
-    font-weight: 600;
-    text-align: center;
-    display: inline-block;
-    margin-top: -15px;
-}
-
-.example-section__notice {
-    width: 100%;
-    max-width: 471px;
-    position: relative;
-    font-size: var(--font-size-16);
-    font-weight: 400;
-    text-align: center;
-    display: inline-block;
-    margin-top: 15px;
-    line-height: 150%;
-    color: inherit;
-}
-
-.example-section__link {
-    width: 100%;
-    max-width: 471px;
-    position: relative;
-    text-align: center;
-    display: inline-block;
-    margin-top: 15px;
-}
-
-.example-section__link a {
-    color: var(--color-white);
-    text-decoration: none;
-    font-size: var(--font-size-16);
-    font-weight: 600;
-    transition: color 0.3s ease;
-    border-bottom: 1px solid var(--color-white);
-}
-
-.example-section__link a:hover {
-    opacity: 0.8;
-    text-decoration: none;
+    margin-right: 0; /* 不要なマージンを削除 */
 }
 
 .example-section__image {
     height: 267px;
-    width: 100%;
+    /* ▼▼▼ 修正 ▼▼▼ */
+    flex: 1; /* 横幅の比率を指定 */
     max-width: 533px;
+    /* ▲▲▲ 修正 ▲▲▲ */
     position: relative;
     object-fit: cover;
     flex-shrink: 0;
-    min-width: 0; /* flexboxのバグ回避 */
+    min-width: 0;
 }
 
 .example-section__long-text {
+    /* ▼▼▼ 修正 ▼▼▼ */
+    flex-basis: 100%; /* 横幅を100%にすることで、強制的に改行させる */
+    /* ▲▲▲ 修正 ▲▲▲ */
     width: 100%;
     color: var(--color-white);
     font-size: var(--font-size-16);
     line-height: 1.8;
     text-align: justify;
     margin-top: 20px;
-    white-space: pre-wrap; /* 改行を反映させる */
-}
-
-.read-more-btn {
-    background: none;
-    border: none;
-    color: #ffffff;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    margin-left: 8px;
-    text-decoration: underline;
-    padding: 0;
-}
-/* お問い合わせセクション */
-.contact-section {
-    width: 100%;
-    max-width: 1440px;
-    height: 636px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    box-sizing: border-box;
-    padding: 15px 163px;
-    gap: 114px;
-    text-align: left;
-    font-size: var(--font-size-36);
-    color: var(--color-black);
-    font-family: var(--font-lato);
-}
-
-.contact-section__text {
-    height: 200px;
-    width: 100%;
-    max-width: 445px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: var(--padding-20) 0;
-}
-
-.contact-section__title {
-    margin: 0;
-    width: 100%;
-    max-width: 445px;
-    height: 107px;
-    position: relative;
-    font-size: var(--font-size-36);
-    font-weight: 600;
-    font-family: inherit;
-    display: inline-block;
-}
-
-.contact-section__description {
-    width: 100%;
-    max-width: 434px;
-    position: relative;
-    font-size: var(--font-size-14);
-    line-height: 140%;
-    text-align: justify;
-    display: inline-block;
-    margin-top: -11px;
+    white-space: pre-wrap;
 }
 
 /* コラムセクション */
