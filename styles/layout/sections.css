@@ -271,12 +271,6 @@
     text-align: justify;
     display: inline-block;
 }
-/* ▼▼▼ 追加したスタイル ▼▼▼ */
-.btn-sample--white {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-/* ▲▲▲ 追加したスタイル ▲▲▲ */
 
 .example-section__author {
 /* ...（既存のスタイル）... */
