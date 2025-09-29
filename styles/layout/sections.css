@@ -202,61 +202,40 @@
     background-color: var(--color-cornflowerblue);
     overflow: hidden;
     display: flex;
-    /* ▼▼▼ 修正 ▼▼▼ */
-    flex-direction: row;   /* 横並びを基本とする */
-    flex-wrap: wrap;       /* 要素がはみ出たら折り返すようにする */
-    align-items: flex-start; /* 上揃え */
+    flex-direction: row;
+    align-items: flex-start;
     justify-content: space-between;
-    /* ▲▲▲ 修正 ▲▲▲ */
     padding: 50px 165px;
-    gap: 40px;
+    gap: 0;
     text-align: left;
     font-size: var(--font-size-24);
     color: var(--color-white);
     font-family: var(--font-lato);
-    height: auto;
-    min-height: 500px;
+}
+
+/* 実例セクション - ロゴ追加 */	
+.example-section__logo {	
+    width: 275px;	
+    height: 44px;	
+    margin: 30px auto 8px;	
+    display: block;	
+    object-fit: contain;	
+    position: relative;	
 }
 
 .example-section__text {
     height: auto;
     min-height: 195px;
-    /* ▼▼▼ 修正 ▼▼▼ */
-    flex: 1; /* 横幅の比率を指定 */
-    min-width: 450px; /* 最小幅を指定 */
-    /* ▲▲▲ 修正 ▲▲▲ */
+    width: 100%;
+    max-width: 471px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     gap: var(--gap-24);
     flex-shrink: 0;
-    margin-right: 0; /* 不要なマージンを削除 */
-}
-
-.example-section__image {
-    height: 267px;
-    /* ▼▼▼ 修正 ▼▼▼ */
-    flex: 1; /* 横幅の比率を指定 */
-    max-width: 533px;
-    /* ▲▲▲ 修正 ▲▲▲ */
-    position: relative;
-    object-fit: cover;
-    flex-shrink: 0;
-    min-width: 0;
-}
-
-.example-section__long-text {
-    /* ▼▼▼ 修正 ▼▼▼ */
-    flex-basis: 100%; /* 横幅を100%にすることで、強制的に改行させる */
-    /* ▲▲▲ 修正 ▲▲▲ */
-    width: 100%;
-    color: var(--color-white);
-    font-size: var(--font-size-16);
-    line-height: 1.8;
-    text-align: justify;
-    margin-top: 20px;
-    white-space: pre-wrap;
+    min-width: 0; /* flexboxのバグ回避 */
+    margin-right: 60px; /* 最小マージンを確保 */
 }
 
 /* コラムセクション */
