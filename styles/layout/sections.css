@@ -273,8 +273,6 @@
 }
 
 .example-section__author {
-/* ...（既存のスタイル）... */
-.example-section__author {
     width: 100%;
     max-width: 471px;
     position: relative;
