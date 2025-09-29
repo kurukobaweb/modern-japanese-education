@@ -208,13 +208,8 @@
         margin-right: 0; /* モバイルではマージンをリセット */
     }
    
-    .example-section__long-text {
-        order: 2; /* 2番目に表示 */
-        text-align: left; /* 本文は左揃えに */
-    }
-   
     .example-section__image {
-        order: 3;
+        order: 2;
         margin-top: 20px;
         height: 259px;
     }
