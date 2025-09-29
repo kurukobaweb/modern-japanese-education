@@ -211,6 +211,9 @@
     font-size: var(--font-size-24);
     color: var(--color-white);
     font-family: var(--font-lato);
+    height: auto; /* 高さを可変に */
+    min-height: 500px; /* 最小限の高さを確保 */
+    align-items: flex-start; /* 全文表示時に上揃えにする */
 }
 
 /* 実例セクション - ロゴ追加 */	
@@ -334,6 +337,27 @@
     min-width: 0; /* flexboxのバグ回避 */
 }
 
+.example-section__long-text {
+    width: 100%;
+    color: var(--color-white);
+    font-size: var(--font-size-16);
+    line-height: 1.8;
+    text-align: justify;
+    margin-top: 20px;
+    white-space: pre-wrap; /* 改行を反映させる */
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 8px;
+    text-decoration: underline;
+    padding: 0;
+}
 /* お問い合わせセクション */
 .contact-section {
     width: 100%;
