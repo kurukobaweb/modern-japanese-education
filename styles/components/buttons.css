@@ -122,6 +122,7 @@
     transform: translateY(-2px);
     color: #ffffff; /* ホバー時も文字色を白に維持 */
 }
+
 .btn-sample--white {
     background-color: #ffffff;
     color: #6495ed;
