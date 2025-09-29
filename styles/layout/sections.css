@@ -272,6 +272,11 @@
     display: inline-block;
 }
 
+.btn-sample--white {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .example-section__author {
     width: 100%;
     max-width: 471px;
