@@ -295,3 +295,77 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+// ...既存のスクリプトはそのまま...
+
+// ▼▼▼ 以下をファイルの末尾に追加 ▼▼▼
+
+// スピーチアプリ説明文の「続きを読む」機能
+document.addEventListener('DOMContentLoaded', function() {
+    const descriptionContainer = document.getElementById('speechAppDescription');
+    if (!descriptionContainer) return;
+
+    const originalText = descriptionContainer.textContent.trim();
+    let isExpanded = false;
+
+    function setupReadMore() {
+        const isMobile = window.innerWidth <= 750;
+        const limit = isMobile ? 100 : 150;
+
+        // 全文表示状態であれば何もしない
+        if (isExpanded) {
+            descriptionContainer.innerHTML = originalText.replace(/\n/g, '<br>');
+            return;
+        }
+
+        if (originalText.length > limit) {
+            const shortText = originalText.substring(0, limit);
+            const remainingText = originalText.substring(limit);
+
+            descriptionContainer.innerHTML = `
+                <span class="short-text">${shortText.replace(/\n/g, '<br>')}</span><span class="dots">...</span><span class="remaining-text hidden">${remainingText.replace(/\n/g, '<br>')}</span>
+                <button class="read-more-btn">続きを読む</button>
+            `;
+
+            const readMoreBtn = descriptionContainer.querySelector('.read-more-btn');
+            readMoreBtn.addEventListener('click', function() {
+                const dots = descriptionContainer.querySelector('.dots');
+                const remaining = descriptionContainer.querySelector('.remaining-text');
+                
+                isExpanded = !isExpanded; // 状態を切り替え
+
+                if (isExpanded) {
+                    dots.style.display = 'none';
+                    remaining.classList.remove('hidden');
+                    this.textContent = '閉じる';
+                } else {
+                    dots.style.display = 'inline';
+                    remaining.classList.add('hidden');
+                    this.textContent = '続きを読む';
+                }
+            });
+        } else {
+            // 文字数が制限に満たない場合は全文表示
+            descriptionContainer.innerHTML = originalText.replace(/\n/g, '<br>');
+        }
+    }
+
+    // 初期表示
+    setupReadMore();
+
+    // ウィンドウリサイズ時に再設定
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(setupReadMore, 250);
+    });
+});
+
+// 汎用スタイルとして reset.css に `hidden` クラスがあるのでそれを利用
+// もしなければ、以下のCSSをどこかに追加してください。
+/*
+.hidden {
+    display: none;
+}
+*/
