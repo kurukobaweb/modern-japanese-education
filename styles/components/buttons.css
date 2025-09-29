@@ -122,13 +122,3 @@
     transform: translateY(-2px);
     color: #ffffff; /* ホバー時も文字色を白に維持 */
 }
-/* ▼▼▼ 追加したスタイル ▼▼▼ */
-.btn-sample--white {
-    background-color: #ffffff;
-    color: #6495ed;
-}
-
-.btn-sample--white:hover {
-    color: #6495ed; /* ホバー時も文字色を維持 */
-}
-/* ▲▲▲ 追加したスタイル ▲▲▲ */
