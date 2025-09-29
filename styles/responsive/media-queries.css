@@ -217,7 +217,11 @@
     .example-section__description {
         margin-bottom: 20px;
     }
-    
+   
+    .example-section__notice {
+        margin-top: 0; /* 上の余白を削除 */
+    }
+   
     /* 日本語スピーチ協会認定のモバイル版フォントサイズ調整 */
     .example-section__status h3 {
         font-size: 20px;
@@ -229,7 +233,7 @@
         width: 100%;
         max-width: 275px;
         height: auto;
-        margin: 30px auto 15px; /* マージンは維持 */
+        margin: 0px auto 15px; /* マージンは維持 */
     }
 }
 
