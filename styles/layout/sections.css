@@ -211,6 +211,9 @@
     font-size: var(--font-size-24);
     color: var(--color-white);
     font-family: var(--font-lato);
+    flex-wrap: wrap; /* 子要素の折り返しを許可 */
+    height: auto;    /* コンテンツの高さに合わせて可変に */
+    padding-bottom: 60px; /* 下部に余白を追加 */
 }
 
 .example-section__text {
@@ -407,4 +410,42 @@
 .column-section__note-btn:hover {
     transform: translateY(-2px);
     color: #FFFFFF;
+}
+
+/* 追加メッセージの共通スタイル */
+.example-section__message {
+    flex-basis: 100%;      /* PC表示時に全幅を利用 */
+    margin-top: 40px;
+    text-align: left;
+    color: var(--color-white);
+}
+
+.message__title {
+    font-size: 14px;      /* PC時のフォントサイズ指定 */
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.message__body {
+    font-size: 14px;      /* PC時のフォントサイズ指定 */
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* JavaScriptで生成される「続きを読む」ボタンのスタイル */
+.read-more-btn {
+    background: none;
+    border: none;
+    color: var(--color-white);
+    cursor: pointer;
+    font-size: inherit;
+    font-weight: 700;
+    text-decoration: underline;
+    padding: 0;
+    margin-left: 5px;
+    transition: opacity 0.3s;
+}
+
+.read-more-btn:hover {
+    opacity: 0.8;
 }
