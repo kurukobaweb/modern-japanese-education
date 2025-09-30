@@ -244,7 +244,7 @@
 .example-section__logo {	
     width: 275px;	
     height: 44px;	
-    margin: 30px auto 8px;	
+    margin: 0px auto 8px;	
     display: block;	
     object-fit: contain;	
     position: relative;	
