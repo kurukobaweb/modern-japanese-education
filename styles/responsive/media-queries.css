@@ -208,9 +208,12 @@
         margin-right: 0; /* モバイルではマージンをリセット */
     }
    
-    .example-section__image {
+    .example-section__image-container {
         order: 2;
         margin-top: 20px;
+    }
+
+    .example-section__image {
         height: 259px;
     }
     
@@ -233,7 +236,7 @@
         width: 100%;
         max-width: 275px;
         height: auto;
-        margin: 0px auto 15px; /* マージンは維持 */
+        margin: 15px auto 15px; /* マージンは維持 */
     }
 }
 
