@@ -414,20 +414,26 @@
 
 /* 追加メッセージの共通スタイル */
 .example-section__message {
-    flex-basis: 100%;      /* PC表示時に全幅を利用 */
+    flex-basis: 100%;
     margin-top: 40px;
     text-align: left;
     color: var(--color-white);
+    /* ▼▼▼ ここから修正 ▼▼▼ */
+    border: 2px solid var(--color-white);
+    border-radius: var(--br-8);
+    padding: 24px;
+    box-sizing: border-box;
+    /* ▲▲▲ ここまで修正 ▲▲▲ */
 }
 
 .message__title {
-    font-size: 14px;      /* PC時のフォントサイズ指定 */
+    font-size: 14px;
     font-weight: 700;
     margin-bottom: 1em;
 }
 
 .message__body {
-    font-size: 14px;      /* PC時のフォントサイズ指定 */
+    font-size: 14px;
     line-height: 1.6;
     text-align: justify;
 }
