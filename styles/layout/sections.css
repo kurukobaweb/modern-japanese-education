@@ -213,6 +213,44 @@
     font-family: var(--font-lato);
 }
 
+.example-section__text {
+    height: auto;
+    min-height: 195px;
+    max-width: 471px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--gap-24);
+    flex-shrink: 0;
+    min-width: 0;
+    margin-right: 60px;
+}
+
+.example-section__status {
+    width: 100%;
+    max-width: 471px;
+    position: relative;
+    font-weight: 600;
+    display: inline-block;
+    text-align: center;
+}
+
+.example-section__status h3 {
+    margin: 0;
+    font-size: var(--font-size-24);
+    font-weight: 600;
+    font-family: inherit;
+    margin-bottom: 8px;
+}
+
+.example-section__title {
+    margin: 0;
+    font-size: var(--font-size-36);
+    font-weight: 700;
+    font-family: inherit;
+}
+
 .example-section__description {
     width: 100%;
     max-width: 471px;
@@ -240,29 +278,35 @@
     line-height: 150%;
     color: inherit;
 }
-/* 実例セクション - ロゴ追加 */	
+
 .example-section__logo {	
     width: 275px;	
     height: 44px;	
-    margin: 0px auto 8px;	
+    margin: 0px auto 8px;
     display: block;	
     object-fit: contain;	
     position: relative;	
 }
 
-.example-section__text {
-    height: auto;
-    min-height: 195px;
+.example-section__author {
     width: 100%;
     max-width: 471px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--gap-24);
+    position: relative;
+    font-size: var(--font-size-14);
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+    margin-top: -15px;
+}
+
+.example-section__image {
+    height: 267px;
+    width: 100%;
+    max-width: 533px;
+    position: relative;
+    object-fit: cover;
     flex-shrink: 0;
-    min-width: 0; /* flexboxのバグ回避 */
-    margin-right: 60px; /* 最小マージンを確保 */
+    min-width: 0;
 }
 
 /* コラムセクション */
