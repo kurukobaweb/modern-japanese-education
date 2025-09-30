@@ -230,22 +230,25 @@
         font-size: 20px;
     }
    
-/* Tablet (750px以下) に追加 */
-@media screen and (max-width: 750px) {
     .example-section__logo {
         width: 100%;
         max-width: 275px;
         height: auto;
         margin: 15px auto 15px; /* マージンは維持 */
     }
-}
-
-/* Mobile (450px以下) に追加 - 必要に応じて */
-@media screen and (max-width: 450px) {
-    .example-section__logo {
-        max-width: 240px; /* 画面幅に応じて調整 */
+    
+    /* メッセージブロックの表示順とマージンを指定 */
+    .example-section__message {
+        order: 3;                 /* テキスト、画像の次に表示 */
+        width: 100%;
+        margin-top: 30px;         /* 上部のマージンを指定 */
     }
-}  
+   
+    /* メッセージのフォントサイズを指定 */
+    .message__title,
+    .message__body {
+        font-size: 16px;          /* スマホ時のフォントサイズ指定 */
+    }
    
     /* お問い合わせセクション モバイル調整 */
     .contact-section {
@@ -380,7 +383,20 @@
         text-align: center;
         display: block;
     }
+    
+    /* モバイルでのサービスカード統一 */
+    .service-card__content {
+        width: 100%;
+        height: auto;
+        min-height: 83px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+    }
 }
+
 /* Mobile (450px以下) */
 @media screen and (max-width: 450px) {
     .service-card__content {
@@ -458,6 +474,10 @@
         padding: var(--padding-19) var(--padding-20);
         box-sizing: border-box;
         gap: var(--gap-19);
+    }
+    
+    .example-section__logo {
+        max-width: 240px; /* 画面幅に応じて調整 */
     }
     
     .contact-section {
@@ -593,19 +613,5 @@
     .footer__address-text,
     .footer__service-links {
         text-align: center;
-    }
-}
-
-/* モバイルでのサービスカード統一 */
-@media screen and (max-width: 750px) {
-    .service-card__content {
-        width: 100%;
-        height: auto;
-        min-height: 83px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 6px;
     }
 }
