@@ -190,24 +190,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const descriptionContainer = document.getElementById('speechAppDescription');
     if (!descriptionContainer) return;
 
-    // 元のテキストを保存（改行も保持）
     const originalText = descriptionContainer.innerHTML.trim();
     let isExpanded = false;
 
     function setupReadMore() {
         const isMobile = window.innerWidth <= 750;
-        const limit = isMobile ? 100 : 150; // モバイル: 100文字, PC: 150文字
-
-        // textContentから純粋なテキストを取得して長さを比較
+        const limit = isMobile ? 100 : 150;
         const textContent = descriptionContainer.textContent.trim();
         
-        // 全文表示状態または文字数制限以下の場合は、元のHTML（改行対応済み）を表示
         if (isExpanded || textContent.length <= limit) {
             descriptionContainer.innerHTML = originalText.replace(/\n\s*\n/g, '<br><br>').replace(/\n/g, '<br>');
             return;
         }
         
-        // 短縮版を作成
         const shortText = textContent.substring(0, limit);
         
         descriptionContainer.innerHTML = `
@@ -217,22 +212,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const readMoreBtn = descriptionContainer.querySelector('.read-more-btn');
         readMoreBtn.addEventListener('click', function() {
-            isExpanded = true; // 一度開いたら閉じない仕様
+            isExpanded = true;
             descriptionContainer.innerHTML = originalText.replace(/\n\s*\n/g, '<br><br>').replace(/\n/g, '<br>');
         });
     }
 
-    // 初期表示
     setupReadMore();
 
-    // ウィンドウリサイズ時に再設定
+    // ▼▼▼ ここから修正 ▼▼▼
+    let lastWindowWidth = window.innerWidth;
     let resizeTimer;
+
     window.addEventListener('resize', function() {
-        clearTimeout(resizeTimer);
-        // リサイズ完了後に実行
-        resizeTimer = setTimeout(() => {
-            isExpanded = false; // リサイズ時は状態をリセット
-            setupReadMore();
-        }, 250);
+        // 現在のウィンドウ幅が前回の幅と異なる場合のみ再設定を実行
+        // (スマホのスクロールによるリサイズイベントを無視するため)
+        if (window.innerWidth !== lastWindowWidth) {
+            clearTimeout(resizeTimer);
+            
+            resizeTimer = setTimeout(() => {
+                isExpanded = false; // 状態をリセット
+                setupReadMore();
+                lastWindowWidth = window.innerWidth; // 新しい画面幅を保存
+            }, 250);
+        }
     });
+    // ▲▲▲ ここまで修正 ▲▲▲
 });
