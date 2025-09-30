@@ -213,6 +213,33 @@
     font-family: var(--font-lato);
 }
 
+.example-section__description {
+    width: 100%;
+    max-width: 471px;
+    position: relative;
+    font-size: var(--font-size-16);
+    line-height: 140%;
+    text-align: justify;
+    display: inline-block;
+}
+
+.btn-sample--white {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.example-section__notice {
+    width: 100%;
+    max-width: 471px;
+    position: relative;
+    font-size: var(--font-size-16);
+    font-weight: 400;
+    text-align: center;
+    display: inline-block;
+    margin-top: 15px;
+    line-height: 150%;
+    color: inherit;
+}
 /* 実例セクション - ロゴ追加 */	
 .example-section__logo {	
     width: 275px;	
