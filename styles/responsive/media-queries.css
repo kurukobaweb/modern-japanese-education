@@ -18,12 +18,8 @@
         padding-right: 81px;
     }
     
-    /* MacBook Air 13インチ対応 - 実例セクションの間隔調整 */
-    /* .example-section { justify-content: space-between; } を削除 */
-    
-    /* 実例セクションのマージン調整 */
     .example-section__text {
-        margin-right: 40px; /* レスポンシブ時のマージン調整 */
+        margin-right: 40px;
     }
 }
 
@@ -54,7 +50,7 @@
     }
 }
 
-/* Tablet (820px以下) */
+/* Tablet & Mobile (820px以下) */
 @media screen and (max-width: 820px) {
     /* ナビゲーション非表示 */
     .header__nav-menu {
@@ -81,34 +77,30 @@
         padding: 40px 0;
     }
     
-    /* セクション調整 */
+    /* セクション共通調整 */
     .initiative-section,
     .lead-section {
         padding: 61px 41px;
         box-sizing: border-box;
     }
     
+    /* リードセクション */
     .lead-section {
         flex-direction: column;
         align-items: center;
     }
     
-    /* ▼▼▼ lead-section テキスト中央揃え修正 ▼▼▼ */
     .lead-section__text {
         order: 2;
         width: 100%;
         max-width: none;
-        align-items: center; /* ブロック自体を中央揃え */
+        align-items: center;
     }
 
-    .lead-section__title {
-        text-align: center; /* PC用の左揃えを上書き */
-    }
-
+    .lead-section__title,
     .lead-section__description {
-        text-align: center; /* PC用の両端揃えを上書き */
+        text-align: center;
     }
-    /* ▲▲▲ ここまで修正 ▲▲▲ */
     
     .lead-section__image {
         order: 1;
@@ -120,7 +112,7 @@
     /* 取り組みセクション */
     .initiative-section {
         gap: 15px;
-        padding: 41px 82px;
+        padding: 41px; /* 左右の余白を調整 */
     }
     
     .initiative-section__title {
@@ -131,53 +123,39 @@
         flex-direction: column;
         align-items: center;
         margin-top: 5px;
+        width: 100%; /* 全幅を確保 */
     }
     
     .initiative-card {
-        align-self: center;
-        margin: 0 auto;
-        width: 100%;
-        max-width: 350px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .initiative-card__image {
-        margin: 0 auto;
-        display: block;
         width: 100%;
         max-width: 350px;
     }
 
-.cta-button__sub {
-    font-size: 14px;
-}
-    /* テキストリンクの表示切り替え */
+    .initiative-card__image {
+        width: 100%;
+    }
+    
     .initiative-section__link {
         display: none;
-        text-align: center;
     }
     
     .initiative-card__mobile-link {
         display: block !important;
-        text-align: center;
     }
     
-    /* サービスセクション モバイル調整 */
-    .service-section__grid {
-        flex-direction: column;
-        height: auto;
-        gap: 30px;
+    /* サービスセクション */
+    .service-section {
+        gap: 40px;
+        padding: 40px 20px;
     }
-    
+
+    .service-section__grid,
     .service-section__column {
-        width: 100%;
         flex-direction: column;
         height: auto;
         gap: 30px;
         align-items: center;
+        width: 100%;
     }
     
     .service-card {
@@ -192,11 +170,6 @@
         height: auto;
         min-height: 83px;
         gap: 6px;
-    }
-    
-    .service-section {
-        gap: 40px;
-        padding: 40px 20px;
     }
     
     /* 実例セクション */
@@ -214,7 +187,7 @@
         max-width: none;
         margin-bottom: 20px;
         order: 1;
-        margin-right: 0; /* モバイルではマージンをリセット */
+        margin-right: 0;
     }
    
     .example-section__image-container {
@@ -225,16 +198,11 @@
     .example-section__image {
         height: 259px;
     }
-    
-    .example-section__description {
-        margin-bottom: 20px;
-    }
    
     .example-section__notice {
-        margin-top: 0; /* 上の余白を削除 */
+        margin-top: 0;
     }
    
-    /* 日本語スピーチ協会認定のモバイル版フォントサイズ調整 */
     .example-section__status h3 {
         font-size: 20px;
     }
@@ -243,23 +211,21 @@
         width: 100%;
         max-width: 275px;
         height: auto;
-        margin: 15px auto 15px; /* マージンは維持 */
+        margin: 15px auto;
     }
     
-    /* メッセージブロックの表示順とマージンを指定 */
     .example-section__message {
-        order: 3;                 /* テキスト、画像の次に表示 */
+        order: 3;
         width: 100%;
-        margin-top: 30px;         /* 上部のマージンを指定 */
+        margin-top: 30px;
     }
    
-    /* メッセージのフォントサイズを指定 */
     .message__title,
     .message__body {
-        font-size: 16px;          /* スマホ時のフォントサイズ指定 */
+        font-size: 16px;
     }
    
-    /* ▼▼▼ contact-sectionの修正 ▼▼▼ */
+    /* お問合せセクション */
     .contact-section {
         gap: 0;
         padding: 60px var(--padding-40);
@@ -271,13 +237,13 @@
     
     .contact-section__text {
         padding: 0;
-        margin-bottom: 10px; /* 説明文の下の余白を10pxに設定 */
+        margin-bottom: 10px;
         text-align: center;
     }
     
     .contact-section__title {
-        height: auto; /* PC用の固定高さを上書き */
-        margin-bottom: 10px; /* タイトルの下の余白を10pxに設定 */
+        height: auto;
+        margin-bottom: 10px;
     }
     
     .contact-section__description {
@@ -290,7 +256,6 @@
         padding: 0;
         align-items: center;
     }
-    /* ▲▲▲ ここまで修正 ▲▲▲ */
     
     .form__name-group {
         gap: 16px;
@@ -316,17 +281,13 @@
         margin: 0 auto;
     }
     
-    .form__grid {
-        width: 100%;
-        max-width: 100%;
-    }
-    
+    .form__grid,
     .form__field {
         width: 100%;
         max-width: 100%;
     }
     
-    /* フッター モバイル調整 */
+    /* フッター */
     .footer {
         gap: 30px;
         height: auto;
@@ -357,12 +318,8 @@
         margin: 0 auto;
         display: block;
     }
-    
-    .landing-page {
-        gap: var(--gap-30);
-    }
 
- /* コラムセクション モバイル調整 */
+    /* コラムセクション */
     .column-section {
         flex-direction: column;
         padding: 61px 41px;
@@ -377,59 +334,17 @@
     }
     
     .column-section__title {
-        text-align: center;
         justify-content: center;
         width: 100%;
-    }
-    
-    .column-section__subtitle {
-        text-align: center;
-    }
-    
-    .column-section__text {
-        text-align: left;
-    }
-    
-    .column-section__link {
-        text-align: center;
-        display: block;
-    }
-    
-    /* モバイルでのサービスカード統一 */
-    .service-card__content {
-        width: 100%;
-        height: auto;
-        min-height: 83px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 6px;
     }
 }
 
 /* Mobile (450px以下) */
 @media screen and (max-width: 450px) {
-    .service-card__content {
-        min-height: 60px;
-    }
-    
-    .header__logo,
-    .header__logo-text,
     .header {
-        height: auto;
-    }
-    
-    .header {
-        align-self: stretch;
-        width: auto;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: space-between;
-        gap: 0;
-        padding-left: var(--padding-20);
-        padding-right: var(--padding-20);
-        box-sizing: border-box;
+        padding: var(--padding-20);
     }
     
     .hero__title {
@@ -440,63 +355,27 @@
         font-size: var(--font-size-19);
     }
     
-    .hero__text-container {
-        gap: var(--gap-5);
-    }
-    
     .hero {
         gap: 19px;
         padding-left: var(--padding-20);
         padding-right: var(--padding-20);
-        box-sizing: border-box;
     }
     
     .lead-section__text {
         gap: var(--gap-19);
     }
     
-    .lead-section {
-        padding: var(--padding-19) var(--padding-20);
-        box-sizing: border-box;
-        gap: var(--gap-19);
-    }
-    
-    .initiative-section {
-        padding: var(--padding-19) var(--padding-20);
-        box-sizing: border-box;
-        gap: var(--gap-19);
-    }
-    
-    .initiative-section__grid {
-        gap: var(--gap-19);
-    }
-    
-    .service-section__grid {
-        gap: var(--gap-19);
-    }
-    
-    .service-section {
-        padding: var(--padding-19) var(--padding-20);
-        box-sizing: border-box;
-        gap: var(--gap-19);
-    }
-    
-    .example-section {
-        padding: var(--padding-19) var(--padding-20);
-        box-sizing: border-box;
-        gap: var(--gap-19);
-    }
-    
-    .example-section__logo {
-        max-width: 240px; /* 画面幅に応じて調整 */
-    }
-    
+    .lead-section,
+    .initiative-section,
+    .service-section,
+    .example-section,
     .contact-section {
         padding: var(--padding-19) var(--padding-20);
-        box-sizing: border-box;
         gap: var(--gap-19);
     }
     
+    .initiative-section__grid,
+    .service-section__grid,
     .form {
         gap: var(--gap-19);
     }
@@ -562,12 +441,6 @@
         font-size: 10px;
         line-height: 140%;
     }
-    
-    .footer__service-links a {
-        display: inline-block;
-        word-break: keep-all;
-        overflow-wrap: break-word;
-    }
 }
 
 /* Compact Mobile (360px以下) */
@@ -585,11 +458,6 @@
     .footer__service-links {
         font-size: 9px;
         line-height: 130%;
-    }
-    
-    .footer__address,
-    .footer__service {
-        min-width: 90px;
     }
 }
 
@@ -619,10 +487,5 @@
         min-width: auto;
         width: 100%;
         margin-bottom: 10px;
-    }
-    
-    .footer__address-text,
-    .footer__service-links {
-        text-align: center;
     }
 }
