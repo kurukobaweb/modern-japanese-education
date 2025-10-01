@@ -22,27 +22,27 @@
     font-family: var(--font-lato);
 }
 
+/* ▼▼▼ ここから修正 ▼▼▼ */
 .contact-section__text {
-    height: 200px;
     width: 100%;
     max-width: 445px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
-    padding: var(--padding-20) 0;
+    justify-content: center; /* 中央揃えに変更 */
+    padding: 30px 0; /* heightの代わりにpaddingで高さを制御 */
 }
 
 .contact-section__title {
     margin: 0;
     width: 100%;
     max-width: 445px;
-    height: 107px;
     position: relative;
     font-size: var(--font-size-36);
     font-weight: 600;
     font-family: inherit;
     display: inline-block;
+    margin-bottom: 15px; /* 説明文との間に余白を設定 */
 }
 
 .contact-section__description {
@@ -53,8 +53,8 @@
     line-height: 140%;
     text-align: justify;
     display: inline-block;
-    margin-top: -11px;
 }
+/* ▲▲▲ ここまで修正 ▲▲▲ */
 
 /* フォーム */
 .form {
