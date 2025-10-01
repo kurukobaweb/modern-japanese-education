@@ -23,7 +23,7 @@
     
     /* 実例セクションのマージン調整 */
     .example-section__text {
-        margin-right: 40px; /* レスポンシブ時のマージン調整 */
+        margin-right: 40px; /* レスポンシブ時のマージнൻ */
     }
 }
 
@@ -90,7 +90,6 @@
     
     .lead-section {
         flex-direction: column;
-        text-align: center;
         align-items: center;
     }
     
@@ -99,12 +98,14 @@
         order: 2;
         width: 100%;
         max-width: none;
-        text-align: center;
     }
 
-    .lead-section__title,
+    .lead-section__title {
+        text-align: center; /* PC用の左揃えを上書き */
+    }
+
     .lead-section__description {
-        text-align: center;
+        text-align: center; /* PC用の両端揃えを上書き */
     }
     /* ▲▲▲ ここまで修正 ▲▲▲ */
     
@@ -265,18 +266,17 @@
         flex-direction: column;
         height: auto;
         text-align: center;
+        align-items: center;
     }
     
     .contact-section__text {
-        text-align: center;
-        align-items: center;
         padding: 0;
         margin-bottom: 10px; /* 説明文の下の余白を10pxに設定 */
+        text-align: center;
     }
     
     .contact-section__title {
-        text-align: center;
-        height: auto; /* 高さを自動調整 */
+        height: auto; /* PC用の固定高さを上書き */
         margin-bottom: 10px; /* タイトルの下の余白を10pxに設定 */
     }
     
