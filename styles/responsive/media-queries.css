@@ -88,13 +88,11 @@
         box-sizing: border-box;
     }
     
-    /* ▼▼▼ lead-sectionの修正 ▼▼▼ */
     .lead-section {
         flex-direction: column;
-        text-align: center; /* 左揃えから中央揃えに変更 */
-        align-items: center; /* 左揃えから中央揃えに変更 */
+        text-align: center;
+        align-items: center;
     }
-    /* ▲▲▲ ここまで修正 ▲▲▲ */
     
     .lead-section__text {
         order: 2;
@@ -253,9 +251,8 @@
    
     /* ▼▼▼ contact-sectionの修正 ▼▼▼ */
     .contact-section {
-        gap: 0; /* 余白を0に変更 */
-        padding-left: var(--padding-40);
-        padding-right: var(--padding-40);
+        gap: 20px; /* 適切な余白を設定 */
+        padding: 60px var(--padding-40);
         box-sizing: border-box;
         flex-direction: column;
         height: auto;
@@ -263,10 +260,10 @@
     }
     
     .contact-section__text {
-        text-align: center; /* 中央揃えに変更 */
-        align-items: center; /* 中央揃えに変更 */
+        text-align: center;
+        align-items: center;
+        padding: 0; /* 内側の余白をリセット */
     }
-    /* ▲▲▲ ここまで修正 ▲▲▲ */
     
     .contact-section__title {
         text-align: center;
@@ -274,8 +271,16 @@
     
     .contact-section__description {
         margin-bottom: 10px;
-        text-align: center;
+        text-align: center; /* 中央揃えを適用 */
     }
+    
+    .form {
+        width: 100%;
+        max-width: 540px;
+        padding: 0; /* 内側の余白をリセット */
+        align-items: center;
+    }
+    /* ▲▲▲ ここまで修正 ▲▲▲ */
     
     .form__name-group {
         gap: 16px;
@@ -299,13 +304,6 @@
     .btn-submit {
         align-self: center;
         margin: 0 auto;
-    }
-    
-    .form {
-        width: 100%;
-        max-width: 540px;
-        padding: 20px 0;
-        align-items: center; /* フォーム内の要素を中央揃え */
     }
     
     .form__grid {
