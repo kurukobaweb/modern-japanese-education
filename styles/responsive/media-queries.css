@@ -23,7 +23,7 @@
     
     /* 実例セクションのマージン調整 */
     .example-section__text {
-        margin-right: 40px; /* レスポンシブ時のマージнൻ */
+        margin-right: 40px; /* レスポンシブ時のマージン調整 */
     }
 }
 
@@ -98,6 +98,7 @@
         order: 2;
         width: 100%;
         max-width: none;
+        align-items: center; /* ブロック自体を中央揃え */
     }
 
     .lead-section__title {
@@ -265,7 +266,6 @@
         box-sizing: border-box;
         flex-direction: column;
         height: auto;
-        text-align: center;
         align-items: center;
     }
     
