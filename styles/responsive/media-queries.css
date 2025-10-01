@@ -94,11 +94,19 @@
         align-items: center;
     }
     
+    /* ▼▼▼ lead-section テキスト中央揃え修正 ▼▼▼ */
     .lead-section__text {
         order: 2;
         width: 100%;
         max-width: none;
+        text-align: center;
     }
+
+    .lead-section__title,
+    .lead-section__description {
+        text-align: center;
+    }
+    /* ▲▲▲ ここまで修正 ▲▲▲ */
     
     .lead-section__image {
         order: 1;
@@ -251,7 +259,7 @@
    
     /* ▼▼▼ contact-sectionの修正 ▼▼▼ */
     .contact-section {
-        gap: 20px; /* 適切な余白を設定 */
+        gap: 0;
         padding: 60px var(--padding-40);
         box-sizing: border-box;
         flex-direction: column;
@@ -262,22 +270,24 @@
     .contact-section__text {
         text-align: center;
         align-items: center;
-        padding: 0; /* 内側の余白をリセット */
+        padding: 0;
+        margin-bottom: 10px; /* 説明文の下の余白を10pxに設定 */
     }
     
     .contact-section__title {
         text-align: center;
+        height: auto; /* 高さを自動調整 */
+        margin-bottom: 10px; /* タイトルの下の余白を10pxに設定 */
     }
     
     .contact-section__description {
-        margin-bottom: 10px;
-        text-align: center; /* 中央揃えを適用 */
+        text-align: center;
     }
     
     .form {
         width: 100%;
         max-width: 540px;
-        padding: 0; /* 内側の余白をリセット */
+        padding: 0;
         align-items: center;
     }
     /* ▲▲▲ ここまで修正 ▲▲▲ */
