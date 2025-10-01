@@ -299,21 +299,24 @@
         margin: 0 auto;
     }
     
+    /* ▼▼▼ ここから修正 ▼▼▼ */
     .form {
         width: 100%;
-        max-width: none;
+        max-width: 540px;
         padding: 20px 0;
+        align-items: center; /* フォーム内の要素を中央揃え */
     }
     
     .form__grid {
         width: 100%;
-        max-width: none;
+        max-width: 100%;
     }
     
     .form__field {
         width: 100%;
-        max-width: none;
+        max-width: 100%;
     }
+    /* ▲▲▲ ここまで修正 ▲▲▲ */
     
     /* フッター モバイル調整 */
     .footer {
