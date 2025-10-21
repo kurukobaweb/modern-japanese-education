@@ -523,6 +523,7 @@
     align-items: flex-start;
     gap: 30px;
     flex-wrap: wrap; /* モバイル用に折り返し */
+    margin-top: 40px; /* ▼▼▼ 追加: 上の画像との余白 ▼▼▼ */
 }
 
 .book-info__image-container {
@@ -540,7 +541,7 @@
 
 .book-info__image {
     width: 100%;
-    max-width: 250px;
+    max-width: 150px; /* ▼▼▼ 修正: 250px から 150px に変更 ▼▼▼ */
     height: auto;
     margin: 0 auto;
     border-radius: 8px;
@@ -556,7 +557,7 @@
 }
 
 .book-info__logo {
-    width: 150px;
+    width: 80px; /* ▼▼▼ 修正: 150px から 80px に変更 ▼▼▼ */
     height: auto;
     margin-bottom: 20px;
 }
