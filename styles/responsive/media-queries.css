@@ -21,6 +21,21 @@
     .example-section__text {
         margin-right: 40px;
     }
+
+    /* ▼▼▼ 1200px時点でのカラム幅を調整 ▼▼▼ */
+    .example-section__columns {
+        gap: 40px;
+    }
+
+    .example-section__text {
+        max-width: 440px;
+        margin-right: 0;
+    }
+
+    .example-section__image-container {
+        max-width: 480px;
+    }
+    /* ▲▲▲ 調整 ▲▲▲ */
 }
 
 /* Desktop (1050px以下) */
@@ -48,6 +63,17 @@
     .contact-section__title {
         font-size: 29px;
     }
+
+    /* ▼▼▼ 1050px時点でのカラム幅を調整 ▼▼▼ */
+    .example-section {
+        padding-left: 82px;
+        padding-right: 82px;
+    }
+
+    .example-section__columns {
+        gap: 30px;
+    }
+    /* ▲▲▲ 調整 ▲▲▲ */
 }
 
 /* Tablet & Mobile (820px以下) */
@@ -172,27 +198,40 @@
         gap: 6px;
     }
     
-    /* 実例セクション */
+    /* ================================== */
+    /* ▼▼▼ 実例セクション 修正箇所 ▼▼▼ */
+    /* ================================== */
+
     .example-section {
         padding: 75px 41px;
         box-sizing: border-box;
-        flex-direction: column;
+        /* flex-direction: column; (親の指定はcolumnのまま) */
         text-align: center;
         gap: 40px;
         align-items: center;
+    }
+
+    /* 2カラムラッパーを縦積みに変更 (新規追加) */
+    .example-section__columns {
+        flex-direction: column;
+        gap: 20px; /* テキストと画像の間のすき間 */
+        align-items: center; /* 中央揃え */
     }
     
     .example-section__text {
         width: 100%;
         max-width: none;
-        margin-bottom: 20px;
-        order: 1;
+        margin-bottom: 0; /* gapで制御するため削除 */
+        order: 0; /* order指定をリセット */
         margin-right: 0;
     }
    
     .example-section__image-container {
-        order: 2;
-        margin-top: 20px;
+        order: 0; /* order指定をリセット */
+        margin-top: 0; /* gapで制御するため削除 */
+        flex: auto; /* PC用のflex:1をリセット */
+        max-width: none; /* PC用のmax-width: 533pxをリセット */
+        width: 100%;
     }
 
     .example-section__image {
@@ -217,13 +256,17 @@
     .example-section__message {
         order: 3;
         width: 100%;
-        margin-top: 30px;
+        margin-top: 0; /* 親のgapで制御するため削除 */
     }
    
     .message__title,
     .message__body {
         font-size: 16px;
     }
+
+    /* ================================== */
+    /* ▲▲▲ 実例セクション 修正ここまで ▲▲▲ */
+    /* ================================== */
    
     /* お問合せセクション */
     .contact-section {
