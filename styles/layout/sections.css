@@ -456,6 +456,19 @@
     opacity: 0.8;
 }
 
+/* ==============================================
+   漢字アプリセクション (新規追加)
+   ============================================== */
+
+/* 漢字アプリのメイン画像 (レスポンシブ対応) */
+.kanji-section__image {
+    width: 100%;       /* 親要素に対して100% (レスポンシブ対応) */
+    max-width: 400px;  /* PC表示での最大幅を400pxに指定 */
+    height: auto;      /* 高さは自動 */
+    border-radius: 8px;
+    object-fit: cover;
+}
+
 .kanji-section {
     background-color: var(--color-white);
     color: var(--color-black);
@@ -523,7 +536,7 @@
     align-items: flex-start;
     gap: 30px;
     flex-wrap: wrap; /* モバイル用に折り返し */
-    margin-top: 40px; /* ▼▼▼ 追加: 上の画像との余白 ▼▼▼ */
+    margin-top: 40px; /* 上の画像との余白 */
 }
 
 .book-info__image-container {
@@ -541,7 +554,7 @@
 
 .book-info__image {
     width: 100%;
-    max-width: 150px; /* ▼▼▼ 修正: 250px から 150px に変更 ▼▼▼ */
+    max-width: 150px; /* 150pxに指定 */
     height: auto;
     margin: 0 auto;
     border-radius: 8px;
@@ -557,7 +570,7 @@
 }
 
 .book-info__logo {
-    width: 80px; /* ▼▼▼ 修正: 150px から 80px に変更 ▼▼▼ */
+    width: 80px; /* 80pxに指定 */
     height: auto;
     margin-bottom: 20px;
 }
