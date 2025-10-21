@@ -501,19 +501,16 @@
     color: var(--color-black);
 }
 
-/* ▼▼▼ メッセージボックス (Flexレイアウトに変更) ▼▼▼ */
+/* ▼▼▼ メッセージボックス (Flexレイアウト指定を解除) ▼▼▼ */
 .kanji-section .example-section__message {
     border: 2px solid var(--color-gray-400);
     color: var(--color-black);
-    display: flex;
-    flex-direction: row;
-    align-items: stretch; /* 高さを揃える */
-    gap: 30px; /* メッセージと書籍情報の間の隙間 */
+    /* display: flex; や gap: などを削除 */
 }
 
-/* (左側) メッセージ本体 */
+/* メッセージ本体 */
 .kanji-section__message-content {
-    flex: 1; /* flexコンテナ内で伸縮 */
+    /* flex: 1; を削除 */
 }
 
 .kanji-section .message__title {
@@ -525,14 +522,15 @@
     font-size: 14px;
 }
 
-/* (右側) 書籍情報 */
+/* ▼▼▼ 書籍情報 (マージンを追加) ▼▼▼ */
 .kanji-section__book-info {
-    flex: 1.2; /* メッセージより少し幅広に */
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 20px;
     flex-wrap: wrap; 
+    margin-top: 40px; /* ▼▼▼ アプリ画像との余白を追加 ▼▼▼ */
+    /* flex: 1.2; などを削除 */
 }
 
 .book-info__image-container {
@@ -575,13 +573,12 @@
     margin: 5px 0;
 }
 
-/* ▼▼▼ レスポンシブ対応 (スマホ表示) ▼▼▼ */
+/* ▼▼▼ レスポンシブ対応 (レイアウト整理) ▼▼▼ */
 @media screen and (max-width: 750px) {
 
-    /* メッセージボックスを縦積みに戻す */
+    /* メッセージボックス (flex-direction: column; などを削除) */
     .kanji-section .example-section__message {
-        flex-direction: column;
-        gap: 0; /* 隙間をリセット */
+        /* 特に追加の指定は不要 */
     }
 
     /* 書籍情報を中央揃えに戻す */
@@ -590,7 +587,7 @@
         align-items: center;
         text-align: center;
         gap: 20px;
-        margin-top: 30px; /* メッセージとの間に余白を追加 */
+        /* margin-top: 30px; 削除 (上のマージン指定で共通化) */
     }
 
     .book-info__details {
