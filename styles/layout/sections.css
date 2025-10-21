@@ -532,8 +532,9 @@
     align-items: flex-start;
     gap: 20px;
     flex-wrap: wrap; 
-    margin-top: 40px; /* ▼▼▼ アプリ画像との余白を追加 ▼▼▼ */
-    /* flex: 1.2; などを削除 */
+    margin-top: 40px; 
+    max-width: 400px; /
+    width: 100%;      /
 }
 
 .book-info__image-container {
