@@ -204,9 +204,9 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-start; /* 変更点 1 */
     padding: 50px 165px;
-    gap: 0;
+    gap: 60px; /* 変更点 2 */
     text-align: left;
     font-size: var(--font-size-24);
     color: var(--color-white);
