@@ -202,18 +202,18 @@
     background-color: var(--color-cornflowerblue);
     overflow: hidden;
     display: flex;
-    flex-direction: row;
+    flex-direction: column; /* ← 修正点1: 縦積みに変更 */
     align-items: flex-start;
-    justify-content: flex-start; /* 変更点 1 */
+    justify-content: flex-start; 
     padding: 50px 165px;
-    gap: 60px; /* 変更点 2 */
+    gap: 40px; /* ← 修正点2: カラムとメッセージ間の余白 */
     text-align: left;
     font-size: var(--font-size-24);
     color: var(--color-white);
     font-family: var(--font-lato);
-    flex-wrap: wrap; /* 子要素の折り返しを許可 */
-    height: auto;    /* コンテンツの高さに合わせて可変に */
-    padding-bottom: 60px; /* 下部に余白を追加 */
+    /* flex-wrap: wrap; ← 修正点3: 削除 */
+    height: auto;
+    padding-bottom: 60px;
 }
 
 .example-section__text {
@@ -414,7 +414,8 @@
 
 /* 追加メッセージの共通スタイル */
 .example-section__message {
-    flex-basis: 100%;
+    flex-basis: auto;
+    width: 100%;
     margin-top: 40px;
     text-align: left;
     color: var(--color-white);
@@ -634,4 +635,14 @@
 /* メッセージボックスのマージン調整 */
 .kanji-section .example-section__message {
     margin-top: 0; /* gapで制御するため不要に */
+}
+
+/* 2カラムを実現するためのラッパー（新規追加） */
+.example-section__columns {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 60px; /* 左カラムと右カラムの間のすき間 */
+    width: 100%;
 }
