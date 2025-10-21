@@ -455,3 +455,132 @@
 .read-more-btn:hover {
     opacity: 0.8;
 }
+
+.kanji-section {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.kanji-section .example-section__description {
+    font-size: 16px; /* 16px指定 */
+    color: var(--color-black);
+    text-align: left; /* 説明文は左揃えに */
+}
+
+/* 箇条書きリストのスタイル */
+.kanji-section__feature-list {
+    font-size: 16px;
+    margin-top: 10px;
+    padding-left: 20px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.kanji-section__feature-list li {
+    margin-bottom: 5px;
+}
+
+
+.kanji-section .example-section__description strong {
+    font-weight: 700;
+    font-size: 1.1em;
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.kanji-section .example-section__notice {
+    font-size: 16px; /* 16px指定 */
+    color: var(--color-black);
+}
+
+/* メッセージボックスのスタイル上書き (枠線指定) */
+.kanji-section .example-section__message {
+    border: 2px solid var(--color-gray-400); /* 白背景で見えるように枠線色を変更 */
+    color: var(--color-black); /* テキスト色を黒に */
+}
+
+.kanji-section .message__title {
+    font-size: 16px; /* h4相当のサイズに */
+    font-weight: 700;
+}
+
+.kanji-section .message__body {
+    font-size: 14px; /* 14px指定 */
+}
+
+/* メッセージボックス内の区切り線 */
+.kanji-section__divider {
+    border: none;
+    height: 1px;
+    background-color: var(--color-gray-500);
+    margin: 30px 0;
+}
+
+/* 書籍情報ブロック */
+.kanji-section__book-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap; /* モバイル用に折り返し */
+}
+
+.book-info__image-container {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.book-info__title {
+    font-size: 20px; /* h3相当のサイズ */
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--color-black);
+}
+
+.book-info__image {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.book-info__details {
+    flex: 2;
+    min-width: 250px;
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: left;
+}
+
+.book-info__logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.book-info__details p {
+    margin: 5px 0;
+}
+
+/* レスポンシブ対応 (書籍情報) */
+@media screen and (max-width: 750px) {
+    .kanji-section__book-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .book-info__details {
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column; /* ロゴを中央揃えにするため */
+    }
+
+    .kanji-section__feature-list {
+        text-align: left;
+    }
+}
