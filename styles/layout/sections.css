@@ -227,7 +227,7 @@
     gap: var(--gap-24);
     flex-shrink: 0;
     min-width: 0;
-    margin-right: 60px;
+    margin-right: 0px;
 }
 
 .example-section__status {
@@ -288,6 +288,8 @@
     align-items: center;
     flex-shrink: 0;
     min-width: 0;
+    flex: 1;
+    max-width: 533px;
 }
 
 .example-section__logo {	
