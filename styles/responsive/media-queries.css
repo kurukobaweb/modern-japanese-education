@@ -86,7 +86,30 @@
     .header {
         width: 100%;
     }
-    
+
+   /* ================================== */
+    /* ▼▼▼ 漢字セクションSP対応 (750px -> 820pxへ移動) ▼▼▼ */
+    /* ================================== */
+
+    /* 書籍情報を中央揃えに戻す */
+    .kanji-section__book-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .book-info__details {
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .kanji-section__feature-list {
+        text-align: left;
+    }
+
     /* ヒーローセクション */
     .hero {
         gap: 75px;
