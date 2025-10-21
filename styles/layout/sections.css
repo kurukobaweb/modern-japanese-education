@@ -456,10 +456,6 @@
     opacity: 0.8;
 }
 
-/* ==============================================
-   漢字アプリセクション (新規追加)
-   ============================================== */
-
 /* 漢字アプリのメイン画像 (レスポンシブ対応) */
 .kanji-section__image {
     width: 100%;       /* 親要素に対して100% (レスポンシブ対応) */
@@ -475,9 +471,9 @@
 }
 
 .kanji-section .example-section__description {
-    font-size: 16px; /* 16px指定 */
+    font-size: 16px;
     color: var(--color-black);
-    text-align: left; /* 説明文は左揃えに */
+    text-align: left;
 }
 
 /* 箇条書きリストのスタイル */
@@ -493,7 +489,6 @@
     margin-bottom: 5px;
 }
 
-
 .kanji-section .example-section__description strong {
     font-weight: 700;
     font-size: 1.1em;
@@ -502,51 +497,52 @@
 }
 
 .kanji-section .example-section__notice {
-    font-size: 16px; /* 16px指定 */
+    font-size: 16px;
     color: var(--color-black);
 }
 
-/* メッセージボックスのスタイル上書き (枠線指定) */
+/* ▼▼▼ メッセージボックス (Flexレイアウトに変更) ▼▼▼ */
 .kanji-section .example-section__message {
-    border: 2px solid var(--color-gray-400); /* 白背景で見えるように枠線色を変更 */
-    color: var(--color-black); /* テキスト色を黒に */
+    border: 2px solid var(--color-gray-400);
+    color: var(--color-black);
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; /* 高さを揃える */
+    gap: 30px; /* メッセージと書籍情報の間の隙間 */
+}
+
+/* (左側) メッセージ本体 */
+.kanji-section__message-content {
+    flex: 1; /* flexコンテナ内で伸縮 */
 }
 
 .kanji-section .message__title {
-    font-size: 16px; /* h4相当のサイズに */
+    font-size: 16px;
     font-weight: 700;
 }
 
 .kanji-section .message__body {
-    font-size: 14px; /* 14px指定 */
+    font-size: 14px;
 }
 
-/* メッセージボックス内の区切り線 */
-.kanji-section__divider {
-    border: none;
-    height: 1px;
-    background-color: var(--color-gray-500);
-    margin: 30px 0;
-}
-
-/* 書籍情報ブロック */
+/* (右側) 書籍情報 */
 .kanji-section__book-info {
+    flex: 1.2; /* メッセージより少し幅広に */
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 30px;
-    flex-wrap: wrap; /* モバイル用に折り返し */
-    margin-top: 40px; /* 上の画像との余白 */
+    gap: 20px;
+    flex-wrap: wrap; 
 }
 
 .book-info__image-container {
     flex: 1;
-    min-width: 200px;
+    min-width: 150px;
     text-align: center;
 }
 
 .book-info__title {
-    font-size: 20px; /* h3相当のサイズ */
+    font-size: 20px;
     font-weight: 700;
     margin-bottom: 15px;
     color: var(--color-black);
@@ -554,7 +550,7 @@
 
 .book-info__image {
     width: 100%;
-    max-width: 150px; /* 150pxに指定 */
+    max-width: 150px; /* 150px指定 */
     height: auto;
     margin: 0 auto;
     border-radius: 8px;
@@ -563,14 +559,14 @@
 
 .book-info__details {
     flex: 2;
-    min-width: 250px;
+    min-width: 200px;
     font-size: 14px;
     line-height: 1.7;
     text-align: left;
 }
 
 .book-info__logo {
-    width: 80px; /* 80pxに指定 */
+    width: 80px; /* 80px指定 */
     height: auto;
     margin-bottom: 20px;
 }
@@ -579,19 +575,29 @@
     margin: 5px 0;
 }
 
-/* レスポンシブ対応 (書籍情報) */
+/* ▼▼▼ レスポンシブ対応 (スマホ表示) ▼▼▼ */
 @media screen and (max-width: 750px) {
+
+    /* メッセージボックスを縦積みに戻す */
+    .kanji-section .example-section__message {
+        flex-direction: column;
+        gap: 0; /* 隙間をリセット */
+    }
+
+    /* 書籍情報を中央揃えに戻す */
     .kanji-section__book-info {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 20px;
+        margin-top: 30px; /* メッセージとの間に余白を追加 */
     }
 
     .book-info__details {
         text-align: center;
         align-items: center;
         display: flex;
-        flex-direction: column; /* ロゴを中央揃えにするため */
+        flex-direction: column; 
     }
 
     .kanji-section__feature-list {
