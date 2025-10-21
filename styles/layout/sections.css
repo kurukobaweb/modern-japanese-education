@@ -601,3 +601,37 @@
         text-align: left;
     }
 }
+/* 漢字アプリセクションのレイアウト上書き（PC表示） */
+
+/* 漢字セクションのflex-directionをrowからcolumnに変更 */
+.kanji-section {
+    flex-direction: column;
+    align-items: center; /* コンテンツを中央揃えに */
+    gap: 40px; /* 各要素のすき間 */
+}
+
+/* テキストブロックの横幅制限を解除 */
+.kanji-section .example-section__text {
+    flex-basis: auto;
+    max-width: 100%;
+    margin-right: 0;
+}
+
+/* 画像コンテナの横幅制限を解除し、中央揃に */
+.kanji-section .example-section__image-container {
+    flex-basis: auto;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+}
+
+/* 書籍情報のレイアウトを再調整 */
+.kanji-section .kanji-section__book-info {
+    justify-content: center; /* PCでも中央揃えに */
+    gap: 60px; /* PCでのすき間を確保 */
+}
+
+/* メッセージボックスのマージン調整 */
+.kanji-section .example-section__message {
+    margin-top: 0; /* gapで制御するため不要に */
+}
