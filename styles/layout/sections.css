@@ -490,6 +490,7 @@
     font-size: 16px;
     color: var(--color-black);
     text-align: left;
+   　display: block;
 }
 
 /* 箇条書きリストのスタイル */
