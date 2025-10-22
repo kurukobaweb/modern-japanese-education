@@ -225,7 +225,8 @@
     gap: 60px; 
     width: 100%;
     max-width: 1110px; 
-    margin: 0 auto; 
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .example-section__text {
@@ -438,7 +439,8 @@
     box-sizing: border-box;
     max-width: 1110px; 
     margin-left: auto; 
-    margin-right: auto;  
+    margin-right: auto;
+    display: block;
 }
 
 .message__title {
