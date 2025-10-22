@@ -83,6 +83,18 @@
     /* ▲▲▲ 調整 ▲▲▲ */
 }
 
+/* PC表示（1050px以上）向けのメッセージボックス幅制御 */
+@media screen and (min-width: 1050px) {
+    .example-section__columns {
+        width: auto;
+        flex: 0 1 auto;
+    }
+    
+    .example-section__message {
+        width: auto;
+        flex: 0 1 auto;
+    }
+}
 /* Tablet & Mobile (820px以下) */
 @media screen and (max-width: 820px) {
     /* ナビゲーション非表示 */
