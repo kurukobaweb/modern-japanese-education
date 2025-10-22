@@ -298,8 +298,7 @@
     align-items: center;
     flex-shrink: 0;
     min-width: 0;
-    flex: 1; /* 修正 */
-    max-width: 533px; /* 修正 */
+    max-width: 533px; 
 }
 
 .example-section__logo {	
