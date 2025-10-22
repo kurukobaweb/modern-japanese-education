@@ -202,11 +202,11 @@
     background-color: var(--color-cornflowerblue);
     overflow: hidden;
     display: flex;
-    flex-direction: column; /* ← 修正点1: 縦積みに変更 */
-    align-items: flex-start;
+    flex-direction: column; 
+    align-items: center;
     justify-content: flex-start; 
     padding: 50px 165px;
-    gap: 40px; /* ← 修正点2: カラムとメッセージ間の余白 */
+    gap: 40px;
     text-align: left;
     font-size: var(--font-size-24);
     color: var(--color-white);
@@ -221,9 +221,11 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: flex-start;
-    gap: 60px; /* 左カラムと右カラムの間のすき間 */
+    justify-content:  center;
+    gap: 60px; 
     width: 100%;
+    max-width: 1110px; 
+    margin: 0 auto; 
 }
 
 .example-section__text {
@@ -425,8 +427,8 @@
 
 /* 追加メッセージの共通スタイル */
 .example-section__message {
-    flex-basis: auto; /* 修正 */
-    width: 100%; /* 修正 */
+    flex-basis: 100%; 
+    width: 100%;
     margin-top: 40px;
     text-align: left;
     color: var(--color-white);
@@ -434,6 +436,9 @@
     border-radius: var(--br-8);
     padding: 24px;
     box-sizing: border-box;
+    max-width: 1110px; 
+    margin-left: auto; 
+    margin-right: auto;  
 }
 
 .message__title {
