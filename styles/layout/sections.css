@@ -216,6 +216,16 @@
     padding-bottom: 60px;
 }
 
+/* 2カラムを実現するためのラッパー（新規追加） */
+.example-section__columns {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 60px; /* 左カラムと右カラムの間のすき間 */
+    width: 100%;
+}
+
 .example-section__text {
     height: auto;
     min-height: 195px;
@@ -227,7 +237,7 @@
     gap: var(--gap-24);
     flex-shrink: 0;
     min-width: 0;
-    margin-right: 0px;
+    margin-right: 0px; /* 修正 */
 }
 
 .example-section__status {
@@ -286,10 +296,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-shrink: 1;
+    flex-shrink: 0;
     min-width: 0;
-    flex: 1;
-    max-width: 533px;
+    flex: 1; /* 修正 */
+    max-width: 533px; /* 修正 */
 }
 
 .example-section__logo {	
@@ -416,17 +426,15 @@
 
 /* 追加メッセージの共通スタイル */
 .example-section__message {
-    flex-basis: auto;
-    width: 100%;
+    flex-basis: auto; /* 修正 */
+    width: 100%; /* 修正 */
     margin-top: 40px;
     text-align: left;
     color: var(--color-white);
-    /* ▼▼▼ ここから修正 ▼▼▼ */
     border: 2px solid var(--color-white);
     border-radius: var(--br-8);
     padding: 24px;
     box-sizing: border-box;
-    /* ▲▲▲ ここまで修正 ▲▲▲ */
 }
 
 .message__title {
@@ -504,16 +512,13 @@
     color: var(--color-black);
 }
 
-/* ▼▼▼ メッセージボックス (Flexレイアウト指定を解除) ▼▼▼ */
 .kanji-section .example-section__message {
     border: 2px solid var(--color-gray-400);
     color: var(--color-black);
-    /* display: flex; や gap: などを削除 */
 }
 
-/* メッセージ本体 */
 .kanji-section__message-content {
-    /* flex: 1; を削除 */
+    /* (変更なし) */
 }
 
 .kanji-section .message__title {
@@ -525,16 +530,29 @@
     font-size: 14px;
 }
 
-/* ▼▼▼ 書籍情報 (マージンを追加) ▼▼▼ */
+/* ================================== */
+/* ▼▼▼ 漢字セクション 書籍情報 修正 ▼▼▼ */
+/* ================================== */
+
+/* ブロック全体 (HTML構造変更に対応) */
 .kanji-section__book-info {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 20px;
-    flex-wrap: wrap; 
+    flex-direction: column; /* 修正: row -> column */
+    align-items: center; /* 追加: 中央揃え */
+    gap: 20px; /* 修正: タイトルとカラム間のgap */
+    /* flex-wrap: wrap; (削除) */
     margin-top: 40px; 
-    max-width: 400px; /
-    width: 100%;      /
+    max-width: 400px; /* PC表示の幅を画像と揃える */
+    width: 100%;
+}
+
+/* 新規追加: 2カラムラッパー（画像と詳細） */
+.book-info__columns {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Task 3: 上揃え */
+    gap: 20px;
+    width: 100%;
 }
 
 .book-info__image-container {
@@ -543,16 +561,19 @@
     text-align: center;
 }
 
+/* タイトル (HTML構造変更に対応) */
 .book-info__title {
     font-size: 20px;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 0px; /* 修正: 15px -> 0px */
     color: var(--color-black);
+    white-space: nowrap; /* Task 2: 改行なし */
+    text-align: center; /* 追加: 中央揃え */
 }
 
 .book-info__image {
     width: 100%;
-    max-width: 150px; /* 150px指定 */
+    max-width: 150px;
     height: auto;
     margin: 0 auto;
     border-radius: 8px;
@@ -561,14 +582,14 @@
 
 .book-info__details {
     flex: 2;
-    min-width: 100px;
+    min-width: 200px;
     font-size: 14px;
     line-height: 1.7;
     text-align: left;
 }
 
 .book-info__logo {
-    width: 80px; /* 80px指定 */
+    width: 80px;
     height: auto;
     margin-bottom: 20px;
 }
@@ -576,48 +597,4 @@
 .book-info__details p {
     margin: 5px 0;
 }
-
-/* 漢字アプリセクションのレイアウト上書き（PC表示） */
-
-/* 漢字セクションのflex-directionをrowからcolumnに変更 */
-.kanji-section {
-    flex-direction: column;
-    align-items: center; /* コンテンツを中央揃えに */
-    gap: 40px; /* 各要素のすき間 */
-}
-
-/* テキストブロックの横幅制限を解除 */
-.kanji-section .example-section__text {
-    flex-basis: auto;
-    max-width: 100%;
-    margin-right: 0;
-}
-
-/* 画像コンテナの横幅制限を解除し、中央揃に */
-.kanji-section .example-section__image-container {
-    flex-basis: auto;
-    width: 100%;
-    max-width: 100%;
-    align-items: center;
-}
-
-/* 書籍情報のレイアウトを再調整 */
-.kanji-section .kanji-section__book-info {
-    justify-content: center; /* PCでも中央揃えに */
-    gap: 60px; /* PCでのすき間を確保 */
-}
-
-/* メッセージボックスのマージン調整 */
-.kanji-section .example-section__message {
-    margin-top: 0; /* gapで制御するため不要に */
-}
-
-/* 2カラムを実現するためのラッパー（新規追加） */
-.example-section__columns {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 60px; /* 左カラムと右カラムの間のすき間 */
-    width: 100%;
-}
+/* ▲▲▲ 漢字セクション 修正ここまで ▲▲▲ */
