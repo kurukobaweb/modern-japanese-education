@@ -64,7 +64,7 @@
         font-size: 29px;
     }
 
-    /* ▼▼▼ 1050px時点でのカラム幅を調整 ▼▼▼ */
+/* ▼▼▼ 1050px時点でのカラム幅を調整 ▼▼▼ */
     .example-section {
         padding-left: 82px;
         padding-right: 82px;
@@ -72,6 +72,13 @@
 
     .example-section__columns {
         gap: 30px;
+        width: auto;
+        flex: 0 1 auto;
+    }
+    
+    .example-section__message {
+        width: auto;
+        flex: 0 1 auto;
     }
     /* ▲▲▲ 調整 ▲▲▲ */
 }
