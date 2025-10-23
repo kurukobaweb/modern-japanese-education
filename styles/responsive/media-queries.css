@@ -396,6 +396,13 @@
         text-align: left;
     }
     
+    /* ▼▼▼ 修正 (820px) ▼▼▼ */
+    /* .footer__logo を .footer__logo-area に変更し、スタイル調整 */
+    .footer__logo-area {
+        width: 100%;
+        align-items: center; /* スマホでは中央揃え */
+    }
+
     .footer__logo {
         width: 100%;
         max-width: 200px;
@@ -403,6 +410,12 @@
         margin: 0 auto;
         display: block;
     }
+
+    .footer__copyright {
+        text-align: center;
+    }
+    /* ▲▲▲ 修正ここまで ▲▲▲ */
+
 
     /* コラムセクション */
     .column-section {
@@ -507,25 +520,39 @@
 @media screen and (max-width: 395px) {
     
     /* ▼▼▼ 修正 (395px) ▼▼▼ */
+    .footer {
+        gap: 15px; /* ロゴエリアとの隙間 (15px) */
+        padding-top: 5px; 
+        padding-bottom: 15px;
+    }
+
     .footer__content {
         justify-content: flex-start;
-        gap: 8px;
+        gap: 5px; /* 各項目の隙間 (5px) */
         padding: 0 5px;
-        flex-direction: column; /* 縦積みに変更 */
-        text-align: center; /* 中央揃え */
+        flex-direction: column; 
+        text-align: left; /* 左揃え */
     }
     
     .footer__address {
-        flex: 1 1 100%; /* flex指定を変更 */
-        min-width: 100%; /* min-widthを変更 */
-        text-align: center;
+        flex: 1 1 100%; 
+        min-width: 100%; 
+        text-align: left; /* 左揃え */
     }
     
     .footer__service {
-        flex: 1 1 100%; /* flex指定を変更 */
-        min-width: 100%; /* min-widthを変更 */
+        flex: 1 1 100%; 
+        min-width: 100%; 
         padding-left: 5px;
-        text-align: center;
+        text-align: left; /* 左揃え */
+    }
+
+    /* 16pxフォント */
+    .footer__address-text,
+    .footer__service-links,
+    .footer__copyright {
+        font-size: 16px;
+        line-height: 1.5; 
     }
     /* ▲▲▲ 修正ここまで ▲▲▲ */
 }
@@ -548,7 +575,6 @@
     }
     
     .footer__service-links {
-        font-size: 10px;
         line-height: 140%;
     }
 }
@@ -565,7 +591,6 @@
     }
     
     .footer__service-links {
-        font-size: 9px;
         line-height: 130%;
     }
 }
@@ -576,19 +601,15 @@
         padding: 0 5px;
         gap: 10px;
         flex-direction: column;
-        text-align: center;
     }
     
     .footer__service {
         padding-right: 5px;
-        text-align: center;
         width: 100%;
     }
     
     .footer__service-links {
-        font-size: 9px;
-        line-height: 130%;
-        text-align: center;
+      line-height: 130%;
     }
     
     .footer__address,
