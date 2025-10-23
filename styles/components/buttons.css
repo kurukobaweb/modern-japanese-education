@@ -131,3 +131,14 @@
 .btn-sample--white:hover {
     color: #6495ed; /* ホバー時も文字色を維持 */
 }
+
+/* 漢字アプリ用ボタン（青背景・黒文字） */
+.btn-sample--blue {
+    background-color: var(--color-cornflowerblue);
+    color: var(--color-black);
+}
+
+.btn-sample--blue:hover {
+    transform: translateY(-2px);
+    color: var(--color-black); /* ホバー時も文字色を黒に維持 */
+}
