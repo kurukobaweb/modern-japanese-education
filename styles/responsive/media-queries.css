@@ -468,6 +468,26 @@
     .landing-page {
         gap: var(--gap-19);
     }
+
+    /* ▼▼▼ 追加 (450px) ▼▼▼ */
+    /* 漢字アプリ：書籍情報を縦積みに */
+    .book-info__columns {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* 漢字アプリ：書籍詳細を中央揃えに */
+    .book-info__details {
+        text-align: center;
+        align-items: center;
+    }
+
+    /* 漢字アプリ：メッセージボックスの余白を縮小 */
+    .example-section__message {
+        padding: 15px;
+    }
+    /* ▲▲▲ 追加ここまで ▲▲▲ */
 }
 
 /* Extra Small Mobile (430px以下) */
@@ -485,22 +505,29 @@
 
 /* iPhone 16対応 (395px以下) */
 @media screen and (max-width: 395px) {
+    
+    /* ▼▼▼ 修正 (395px) ▼▼▼ */
     .footer__content {
         justify-content: flex-start;
         gap: 8px;
         padding: 0 5px;
+        flex-direction: column; /* 縦積みに変更 */
+        text-align: center; /* 中央揃え */
     }
     
     .footer__address {
-        flex: 0 0 90px;
-        min-width: 90px;
+        flex: 1 1 100%; /* flex指定を変更 */
+        min-width: 100%; /* min-widthを変更 */
+        text-align: center;
     }
     
     .footer__service {
-        flex: 1;
-        min-width: 80px;
+        flex: 1 1 100%; /* flex指定を変更 */
+        min-width: 100%; /* min-widthを変更 */
         padding-left: 5px;
+        text-align: center;
     }
+    /* ▲▲▲ 修正ここまで ▲▲▲ */
 }
 
 /* Ultra Small Mobile (390px以下) - iPhone 15対応 */
@@ -512,13 +539,11 @@
     }
     
     .footer__address {
-        flex: 0 0 80px;
-        min-width: 80px;
+        /* (395pxの指定が継承される) */
     }
     
     .footer__service {
-        flex: 1;
-        min-width: 70px;
+        /* (395pxの指定が継承される) */
         padding-left: 3px;
     }
     
@@ -537,7 +562,6 @@
     
     .footer__service {
         padding-right: 10px;
-        min-width: 90px;
     }
     
     .footer__service-links {
