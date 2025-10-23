@@ -565,13 +565,11 @@
     text-align: center;
 }
 
-/* タイトル (HTML構造変更に対応) */
 .book-info__title {
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 0px; /* 修正: 15px -> 0px */
     color: var(--color-black);
-    white-space: nowrap; /* Task 2: 改行なし */
     text-align: center; /* 追加: 中央揃え */
 }
 
