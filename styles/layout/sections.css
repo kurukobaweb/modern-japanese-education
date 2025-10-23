@@ -427,7 +427,7 @@
 /* 追加メッセージの共通スタイル */
 .example-section__message {
     flex-basis: auto; 
-    width: auto;
+    width: 100%;
     margin-top: 40px;
     text-align: left;
     color: var(--color-white);
@@ -438,8 +438,6 @@
     max-width: 1110px; 
     margin-left: auto; 
     margin-right: auto;
-    display: flex;
-    justify-content: center;
 }
 
 .message__title {
