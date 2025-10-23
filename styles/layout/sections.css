@@ -472,9 +472,9 @@
 
 /* 漢字アプリのメイン画像 (レスポンシブ対応) */
 .kanji-section__image {
-    width: 100%;       /* 親要素に対して100% (レスポンシブ対応) */
-    max-width: 400px;  /* PC表示での最大幅を400pxに指定 */
-    height: auto;      /* 高さは自動 */
+    width: 100%;      
+    max-width: 553px;  
+    height: auto;     
     border-radius: 8px;
     object-fit: cover;
 }
@@ -541,12 +541,11 @@
 /* ブロック全体 (HTML構造変更に対応) */
 .kanji-section__book-info {
     display: flex;
-    flex-direction: column; /* 修正: row -> column */
-    align-items: center; /* 追加: 中央揃え */
-    gap: 20px; /* 修正: タイトルとカラム間のgap */
-    /* flex-wrap: wrap; (削除) */
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
     margin-top: 40px; 
-    max-width: 400px; /* PC表示の幅を画像と揃える */
+    max-width: 553px; 
     width: 100%;
 }
 
