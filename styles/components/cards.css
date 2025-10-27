@@ -121,6 +121,12 @@
     font-size: inherit;
     font-weight: 700;
     font-family: inherit;
+    height: 54px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .service-card__description {
