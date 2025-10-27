@@ -173,7 +173,8 @@
 .service-section__grid {
     width: 100%;
     max-width: 1102px;
-    height: 226px;
+    height: auto;
+    min-height: 226px;
     display: flex;
     flex-direction: row;
     align-items: flex-start; /* 修正: center から flex-start に変更 */
@@ -185,8 +186,9 @@
 
 .service-section__column {
     width: 532px;
-    height: 226px;
-    overflow: hidden;
+    height: auto;
+    min-height: 226px;
+    overflow: visible;
     flex-shrink: 0;
     display: flex;
     flex-direction: row;

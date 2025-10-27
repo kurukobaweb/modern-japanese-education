@@ -69,14 +69,15 @@
 
 /* サービスカード */
 .service-card {
-    height: 226px;
+    height: auto;
+    min-height: 226px;
     width: 255px;
     background-color: var(--color-white);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 0 var(--padding-20) 0 var(--padding-19);
+    padding: 0 var(--padding-20) 20px var(--padding-19);
     gap: var(--gap-5);
 }
 
@@ -102,8 +103,9 @@
 
 .service-card__content {
     width: 216px;
-    height: 83px;
-    overflow: hidden;
+    height: auto;
+    min-height: 83px;
+    overflow: visible;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
