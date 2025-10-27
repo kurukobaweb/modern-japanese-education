@@ -239,7 +239,21 @@
         min-height: 83px;
         gap: 6px;
     }
-    
+
+    .service-card__icon-container {
+        height: auto;
+        min-height: 50px;
+    }
+
+    .service-card__icon {
+        height: auto;
+        max-height: 100%;
+    }
+
+    .service-card__title {
+        height: auto;
+    }
+
     /* ================================== */
     /* ▼▼▼ 実例セクション 修正箇所 ▼▼▼ */
     /* ================================== */
