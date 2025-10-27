@@ -349,15 +349,15 @@
 }
 
 .column-section__left {
-    flex-shrink: 0; /
-    width: 30%;     /
+    flex-shrink: 0;
+    width: 30%;
     display: flex;
     align-items: flex-start;
     min-width: 0;
 }
 
 .column-section__right {
-    flex: 1; /
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -452,8 +452,8 @@
     text-align: justify;
 }
 
-/* JavaScriptで生成される「続きを読む」ボタンのスタイル */
-.read-more-btn {
+/* JavaScriptで生成される「続きを読む」ボタンのスタイル（実例セクション用） */
+.example-section .read-more-btn {
     background: none;
     border: none;
     color: var(--color-white);
@@ -466,7 +466,7 @@
     transition: opacity 0.3s;
 }
 
-.read-more-btn:hover {
+.example-section .read-more-btn:hover {
     opacity: 0.8;
 }
 
@@ -488,7 +488,7 @@
     font-size: 16px;
     color: var(--color-black);
     text-align: left;
-   　display: block;
+    display: block;
 }
 
 /* 箇条書きリストのスタイル */
