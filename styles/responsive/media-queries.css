@@ -187,9 +187,8 @@
         margin-bottom: 15px;
     }
     
-    .initiative-section__grid {
-        flex-direction: column;
-        align-items: center;
+        .initiative-section__video-link {
+            display: none;
         margin-top: 5px;
         width: 100%; /* 全幅を確保 */
     }
@@ -205,6 +204,31 @@
     
     .initiative-section__link {
         display: none;
+    }
+    .initiative-section__video-link {
+        display: block;
+        text-align: left;
+    }
+    
+    /* モバイルでアイコンをテキスト末尾に配置（テキストは左揃え） */
+    .initiative-section__video-link a {
+        display: inline;
+        text-align: left;
+    }
+    
+    /* 「動画」とアイコンの間で改行させない */
+    .initiative-section__video-link .no-break {
+        white-space: nowrap;
+    }
+    
+    .initiative-section__video-link img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 4px;
+    }
+
+    .initiative-card__mobile-link {
+        display: block !important;
     }
     
     .initiative-card__mobile-link {
