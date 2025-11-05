@@ -205,50 +205,21 @@
     .initiative-section__link {
         display: none;
     }
+
+    /* ▼▼▼ 取り組みセクション - 動画リンク（タブレット）▼▼▼ */
     .initiative-section__video-link {
         display: block;
-        text-align: left;
+        text-align: center; /* タブレットでは中央揃え */
     }
-    
-    /* モバイルでアイコンをテキスト末尾に配置（テキストは左揃え） */
+
     .initiative-section__video-link a {
-        display: inline;
-        text-align: left;
+        display: inline; /* シンプルなインライン表示 */
+        text-align: center;
     }
-    
-    /* 「動画」とアイコンの間で改行させない */
-    .initiative-section__video-link .no-break {
-        white-space: nowrap;
-    }
-    
+
     .initiative-section__video-link img {
-        display: inline-block;
+        margin-left: 8px;
         vertical-align: middle;
-        margin-left: 4px;
-    }
-
-    /* ▼▼▼ サービスセクション - 情報リンク（モバイル）▼▼▼ */
-    .service-section__info-link {
-        display: block;
-        text-align: left;
-        padding-left: 41px; /* 他のセクションと左揃え */
-        padding-right: 41px;
-        box-sizing: border-box;
-    }
-
-    .service-section__info-link a {
-        display: inline; /* flexを解除し、左揃えに */
-        text-align: left;
-    }
-
-    .service-section__info-link .no-break {
-        white-space: nowrap; /* 「企業情報」とアイコンが改行されないように */
-    }
-
-    .service-section__info-link img {
-        display: inline-block;
-        vertical-align: middle;
-        margin-left: 4px;
     }
     
     /* サービスセクション */
@@ -358,31 +329,6 @@
     .message__title,
     .message__body {
         font-size: 16px;
-    }
-
-    /* ▼▼▼ 実例(スピーチ) - 詳細リンク(モバイル) ▼▼▼ */
-    .example-section__detail-link {
-        display: block;
-        text-align: left; /* 左揃えの指示 */
-        padding-left: 41px; /* 親セクションのpaddingと合わせる */
-        padding-right: 41px;
-        box-sizing: border-box;
-        margin-top: 25px; /* noticeとの間隔 */
-    }
-
-    .example-section__detail-link a {
-        display: inline; /* flexを解除し、左揃えに */
-        text-align: left;
-    }
-
-    .example-section__detail-link .no-break {
-        white-space: nowrap; /* 「詳細」とアイコンが改行されないように */
-    }
-
-    .example-section__detail-link img {
-        display: inline-block;
-        vertical-align: middle;
-        margin-left: 4px;
     }
 
     /* ▼▼▼ 実例(スピーチ) - 動画リンク(モバイル) ▼▼▼ */
@@ -536,6 +482,11 @@
     .column-section__title {
         justify-content: center;
         width: 100%;
+    }
+
+    /* ▼▼▼ コラム - Noteボタン（タブレット）▼▼▼ */
+    .column-section__note-btn {
+        align-self: center; /* PC用のflex-startを上書き */
     }
 }
 
@@ -721,5 +672,74 @@
         min-width: auto;
         width: 100%;
         margin-bottom: 10px;
+    }
+
+    /* ▼▼▼ サービスセクション - 情報リンク（モバイル）▼▼▼ */
+    .service-section__info-link {
+        display: block;
+        text-align: left;
+        padding-left: 41px; /* 他のセクションと左揃え */
+        padding-right: 41px;
+        box-sizing: border-box;
+    }
+
+    .service-section__info-link a {
+        display: inline; /* flexを解除し、左揃えに */
+        text-align: left;
+    }
+
+    .service-section__info-link .no-break {
+        white-space: nowrap; /* 「企業情報」とアイコンが改行されないように */
+    }
+
+    .service-section__info-link img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 4px;
+    }
+
+    /* ▼▼▼ 実例(スピーチ) - 詳細リンク(モバイル) ▼▼▼ */
+    .example-section__detail-link {
+        display: block;
+        text-align: left; /* 左揃えの指示 */
+        padding-left: 41px; /* 親セクションのpaddingと合わせる */
+        padding-right: 41px;
+        box-sizing: border-box;
+        margin-top: 25px; /* noticeとの間隔 */
+    }
+
+    .example-section__detail-link a {
+        display: inline; /* flexを解除し、左揃えに */
+        text-align: left;
+    }
+
+    .example-section__detail-link .no-break {
+        white-space: nowrap; /* 「詳細」とアイコンが改行されないように */
+    }
+
+    .example-section__detail-link img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 4px;
+    }
+
+    /* ▼▼▼ 取り組みセクション - 動画リンク（モバイル）▼▼▼ */
+    .initiative-section__video-link {
+        display: block;
+        text-align: left;
+        padding-left: 41px;
+        padding-right: 41px;
+        box-sizing: border-box;
+    }
+    
+    .initiative-section__video-link a {
+        display: inline;
+        text-align: left;
+    }
+    
+    .initiative-section__video-link img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 4px;
     }
 }
