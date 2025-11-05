@@ -625,3 +625,91 @@
     margin: 5px 0;
 }
 /* ▲▲▲ 漢字セクション 修正ここまで ▲▲▲ */
+
+/* ================================== */
+/* ▼▼▼ サービスセクション - 情報リンク ▼▼▼ */
+/* ================================== */
+.service-section__info-link {
+    width: 100%;
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+.service-section__info-link a {
+    color: var(--color-black);
+    text-decoration: none;
+    font-size: var(--font-size-16);
+    font-weight: 600;
+    font-family: var(--font-lato);
+    transition: color 0.3s ease;
+}
+.service-section__info-link a:hover {
+    color: var(--color-crimson);
+}
+.service-section__info-link img {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-left: 8px; /* gapの代わりにmargin-leftを使用 */
+    vertical-align: middle; /* 垂直中央揃え */
+}
+
+/* ================================== */
+/* ▼▼▼ 実例(スピーチ) - 詳細リンク ▼▼▼ */
+/* ================================== */
+.example-section__detail-link {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px; /* noticeとの間隔 */
+    margin-bottom: 10px;
+}
+.example-section__detail-link a {
+    color: var(--color-white); /* 背景が青のため白文字 */
+    text-decoration: none;
+    font-size: var(--font-size-16);
+    font-weight: 600;
+    font-family: var(--font-lato);
+    transition: color 0.3s ease;
+}
+.example-section__detail-link a:hover {
+    color: var(--color-crimson); /* ホバー色は赤 */
+}
+.example-section__detail-link img {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-left: 8px; /* gapの代わりにmargin-leftを使用 */
+    vertical-align: middle; /* 垂直中央揃え */
+}
+
+/* ================================== */
+/* ▼▼▼ 実例(スピーチ) - 動画リンク ▼▼▼ */
+/* ================================== */
+.example-section__video-links {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px; /* 画像との間隔 */
+    margin-bottom: 10px;
+    display: flex; /* 2つのリンクを縦に並べる */
+    flex-direction: column;
+    gap: 10px; /* リンク同士の間隔 */
+}
+.example-section__video-links a {
+    color: var(--color-white); /* 背景が青のため白文字 */
+    text-decoration: none;
+    font-size: var(--font-size-16);
+    font-weight: 600;
+    font-family: var(--font-lato);
+    transition: color 0.3s ease;
+    /* display: inline-flex; などを削除し、バグを解消 */
+}
+.example-section__video-links a:hover {
+    color: var(--color-crimson); /* ホバー色は赤 */
+}
+.example-section__video-links img {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-left: 8px; /* gapの代わりにmargin-leftを使用 */
+    vertical-align: middle; /* 垂直中央揃え */
+}

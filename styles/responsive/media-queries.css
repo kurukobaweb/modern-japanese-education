@@ -227,12 +227,28 @@
         margin-left: 4px;
     }
 
-    .initiative-card__mobile-link {
-        display: block !important;
+    /* ▼▼▼ サービスセクション - 情報リンク（モバイル）▼▼▼ */
+    .service-section__info-link {
+        display: block;
+        text-align: left;
+        padding-left: 41px; /* 他のセクションと左揃え */
+        padding-right: 41px;
+        box-sizing: border-box;
     }
-    
-    .initiative-card__mobile-link {
-        display: block !important;
+
+    .service-section__info-link a {
+        display: inline; /* flexを解除し、左揃えに */
+        text-align: left;
+    }
+
+    .service-section__info-link .no-break {
+        white-space: nowrap; /* 「企業情報」とアイコンが改行されないように */
+    }
+
+    .service-section__info-link img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 4px;
     }
     
     /* サービスセクション */
@@ -342,6 +358,54 @@
     .message__title,
     .message__body {
         font-size: 16px;
+    }
+
+    /* ▼▼▼ 実例(スピーチ) - 詳細リンク(モバイル) ▼▼▼ */
+    .example-section__detail-link {
+        display: block;
+        text-align: left; /* 左揃えの指示 */
+        padding-left: 41px; /* 親セクションのpaddingと合わせる */
+        padding-right: 41px;
+        box-sizing: border-box;
+        margin-top: 25px; /* noticeとの間隔 */
+    }
+
+    .example-section__detail-link a {
+        display: inline; /* flexを解除し、左揃えに */
+        text-align: left;
+    }
+
+    .example-section__detail-link .no-break {
+        white-space: nowrap; /* 「詳細」とアイコンが改行されないように */
+    }
+
+    .example-section__detail-link img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 4px;
+    }
+
+    /* ▼▼▼ 実例(スピーチ) - 動画リンク(モバイル) ▼▼▼ */
+    .example-section__video-links {
+        align-items: flex-start; /* リンクをコンテナの左端に揃える */
+        padding-left: 41px; /* 親セクションのpaddingと合わせる */
+        padding-right: 41px;
+        box-sizing: border-box;
+        margin-top: 25px;
+        gap: 15px; /* スマホではリンク間の隙間を広げる */
+    }
+    .example-section__video-links a {
+        display: inline; /* flexを解除し、左揃えに */
+        text-align: left;
+        justify-content: flex-start; /* flexの名残を消す */
+    }
+    .example-section__video-links .no-break {
+        white-space: nowrap; /* 「動画」とアイコンが改行されないように */
+    }
+    .example-section__video-links img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 4px;
     }
 
     /* ================================== */
