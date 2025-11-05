@@ -443,6 +443,7 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
     text-align: center; /* テキストを中央揃え */
+        align-self: flex-start;
 }
 
 .column-section__note-btn:hover {
