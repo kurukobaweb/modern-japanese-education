@@ -28,6 +28,7 @@
   margin-bottom: 4px;
   font-weight: 600;
   color: var(--color-black);
+  text-align: left;
 }
 
 /* Contact layout (PC two-column) */
@@ -35,6 +36,9 @@
   display: flex;
   gap: 40px;
 }
+/* Column ratio for contact section */
+.contact-section__text { flex: 1; }
+.form { flex: 2; max-width: 600px; }
 
 /* Inputs unified styling */
 .form__field,
@@ -52,6 +56,12 @@
   background: #fff;
   box-sizing: border-box;
 }
+/* Name fields side-by-side (PC) - forms.css handles base styles with flex:1 */
+.form__name-group { gap: 15px; }
+/* Field gaps PC */
+.form__grid, .form__email-group, .form__phone-group { gap: 15px; }
+/* Override alignment to ensure labels (e.g., お問い合わせ内容) are left-aligned */
+.form__email-group { align-items: flex-start; }
 
 /* Submit button style */
 .btn-submit {
@@ -65,6 +75,7 @@
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
+  margin: 24px 0; /* vertical spacing PC */
 }
 .btn-submit:hover {
   filter: brightness(1.05);
@@ -79,8 +90,7 @@
   p { font-size: 1rem; }
   .example-section { padding: 20px; text-align: center; }
   .contact-section { flex-direction: column; }
-  .service-section__grid { flex-direction: column; align-items: center; gap: 24px; }
-  .service-section__column { width: 100%; flex-direction: column; gap: 20px; align-items: center; height: auto; }
-  .service-card { width: 100%; max-width: 420px; display: flex; flex-direction: column; align-items: center; text-align: center; }
-  .service-card__icon-container { margin-bottom: 8px; }
+  .form { width: 100%; max-width: 100%; }
+  .btn-submit { width: 100% !important; margin: 24px 0 0; }
+  .contact-section__description p { text-align: left; }
 }
