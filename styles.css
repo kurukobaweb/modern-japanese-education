@@ -56,8 +56,9 @@
   background: #fff;
   box-sizing: border-box;
 }
-/* Name fields side-by-side (PC) - forms.css handles base styles with flex:1 */
+/* Name fields side-by-side (PC) - equal width */
 .form__name-group { gap: 15px; }
+.form__name-field { flex: 1; max-width: none; min-width: 0; }
 /* Field gaps PC */
 .form__grid, .form__email-group, .form__phone-group { gap: 15px; }
 /* Override alignment to ensure labels (e.g., お問い合わせ内容) are left-aligned */
@@ -93,4 +94,7 @@
   .form { width: 100%; max-width: 100%; }
   .btn-submit { width: 100% !important; margin: 24px 0 0; }
   .contact-section__description p { text-align: left; }
+  /* Name fields mobile: stack vertically with equal width */
+  .form__name-group { flex-direction: column; gap: 15px; }
+  .form__name-field { width: 100%; max-width: 100%; margin: 0; }
 }
