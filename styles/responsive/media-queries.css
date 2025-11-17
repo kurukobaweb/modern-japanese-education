@@ -209,12 +209,15 @@
     /* ▼▼▼ 取り組みセクション - 動画リンク（タブレット）▼▼▼ */
     .initiative-section__video-link {
         display: block;
-        text-align: center; /* タブレットでは中央揃え */
+        text-align: left; /* 修正：center から left へ変更 */
+        padding-left: 41px; /* スマホ版(450px)の指定をこちらに移動 */
+        padding-right: 41px;
+        box-sizing: border-box;
     }
 
     .initiative-section__video-link a {
-        display: inline; /* シンプルなインライン表示 */
-        text-align: center;
+        display: inline;
+        text-align: left; /* 修正：center から left へ変更 */
     }
 
     .initiative-section__video-link img {
