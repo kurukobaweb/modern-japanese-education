@@ -12,8 +12,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <title>次世代の日本語学習をめざして | Modern - 日本語教育のデジタル化推進</title>
-    <meta name="description" content="株式会社モダンは革新的なオンラインプラットフォームとデジタルツールを通じて日本語教育に新たな可能性を開拓します。多言語対応アプリ、LMS、インタラクティブ教科書など充実したサービスを提供。" />
+    <title>次世代の日本語学習をめざして | MODERN</title>
+    <meta name="description" content="日本語教育の未来を支えるMODERNの取り組みとサービスをご紹介します。" />
     <meta name="keywords" content="日本語教育,デジタル学習,LMS,多言語対応,インタラクティブ教科書,チャットボット,オンライン学習,株式会社モダン" />
     <meta name="author" content="株式会社モダン" />
     
@@ -36,18 +36,7 @@
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap" />
     
-    <link rel="stylesheet" href="./styles/base/variables.css" />
-    <link rel="stylesheet" href="./styles/base/reset.css" />
-    <link rel="stylesheet" href="./styles/base/typography.css" />
-    <link rel="stylesheet" href="./styles/layout/header.css" />
-    <link rel="stylesheet" href="./styles/layout/hero.css" />
-    <link rel="stylesheet" href="./styles/layout/sections.css" />
-    <link rel="stylesheet" href="./styles/layout/footer.css" />
-    <link rel="stylesheet" href="./styles/components/cards.css" />
-    <link rel="stylesheet" href="./styles/components/buttons.css" />
-    <link rel="stylesheet" href="./styles/components/forms.css" />
-    <link rel="stylesheet" href="./styles/pages/landing.css" />
-    <link rel="stylesheet" href="./styles/responsive/media-queries.css" />
+    <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
     <div class="landing-page">
@@ -342,27 +331,33 @@
                 <section class="form">
                     <form id="contactForm" class="form__grid">
                         <div class="form__field">
+                            <label for="companyName" class="form__label">会社名</label>
                             <input class="form__input" id="companyName" placeholder="会社名" type="text" required />
                         </div>
                         <div class="form__email-group">
                             <div class="form__phone-group">
                                 <div class="form__field">
+                                    <label for="companyEmail" class="form__label">メールアドレス</label>
                                     <input class="form__input" id="companyEmail" placeholder="会社のメールアドレス" type="email" required />
                                 </div>
                                 <div class="form__name-container">
                                     <div class="form__field">
+                                        <label for="phoneNumber" class="form__label">電話番号</label>
                                         <input class="form__input" id="phoneNumber" placeholder="電話番号　例）03-1234-5678" type="tel" required />
                                     </div>
                                     <div class="form__name-group">
                                         <div class="form__name-field">
+                                            <label for="lastName" class="form__label">姓</label>
                                             <input class="form__input" id="lastName" placeholder="お名前（姓）" type="text" required />
                                         </div>
                                         <div class="form__name-field">
+                                            <label for="firstName" class="form__label">名</label>
                                             <input class="form__input" id="firstName" placeholder="お名前（名）" type="text" required />
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <label for="inquiryContent" class="form__label">お問い合わせ内容</label>
                             <textarea class="form__textarea" id="inquiryContent" placeholder="お問合せ内容" rows="6" cols="27" required></textarea>
                         </div>
                     </form>
@@ -414,6 +409,6 @@
               </div>   
         </footer>
     </div>
-    <script src="script.js" defer></script>
+    <script src="./script.js" defer></script>
 </body>
 </html>

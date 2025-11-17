@@ -1,0 +1,86 @@
+@import url('./styles/base/variables.css');
+@import url('./styles/base/reset.css');
+@import url('./styles/base/typography.css');
+@import url('./styles/layout/header.css');
+@import url('./styles/layout/hero.css');
+@import url('./styles/layout/sections.css');
+@import url('./styles/layout/footer.css');
+@import url('./styles/components/cards.css');
+@import url('./styles/components/buttons.css');
+@import url('./styles/components/forms.css');
+@import url('./styles/pages/landing.css');
+@import url('./styles/responsive/media-queries.css');
+
+/* Hero text: remove bg, add text-shadow for readability */
+.hero__text-container {
+  background: transparent;
+}
+.hero__title,
+.hero__subtitle {
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+/* Form labels */
+.form__label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+/* Contact layout (PC two-column) */
+.contact-section {
+  display: flex;
+  gap: 40px;
+}
+
+/* Inputs unified styling */
+.form__field,
+.form__name-field {
+  border: none;
+  padding: 0;
+}
+.form__input,
+.form__textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: var(--color-black);
+  background: #fff;
+  box-sizing: border-box;
+}
+
+/* Submit button style */
+.btn-submit {
+  background-color: #d32f2f !important;
+  color: #fff !important;
+  padding: 12px !important;
+  border-radius: 4px !important;
+  border: none !important;
+  width: auto !important;
+  height: auto !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.btn-submit:hover {
+  filter: brightness(1.05);
+}
+.btn-submit__text {
+  color: #fff !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  h1 { font-size: 1.5rem; }
+  p { font-size: 1rem; }
+  .example-section { padding: 20px; text-align: center; }
+  .contact-section { flex-direction: column; }
+  .service-section__grid { flex-direction: column; align-items: center; gap: 24px; }
+  .service-section__column { width: 100%; flex-direction: column; gap: 20px; align-items: center; height: auto; }
+  .service-card { width: 100%; max-width: 420px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .service-card__icon-container { margin-bottom: 8px; }
+}
