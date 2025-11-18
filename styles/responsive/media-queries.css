@@ -411,6 +411,24 @@
         overflow: visible;
         padding-top: 5px;
     }
+    /* Mobile fix: prevent label/input clipping for email & phone groups */
+    .form__email-group,
+    .form__phone-group {
+        height: auto;
+        overflow: visible;
+        align-items: flex-start;
+        gap: 15px; /* compact spacing on mobile */
+    }
+    .form__email-group > .form__phone-group > .form__field:first-child,
+    .form__phone-group > .form__field:first-child {
+        height: auto;
+        overflow: visible;
+        padding-top: 4px;
+    }
+    /* Ensure label displays and has space */
+    .form__field .form__label { display:block; margin-bottom:4px; }
+    /* Input vertical alignment */
+    .form__input { height: 32px; line-height: 32px; }
     
     .btn-submit {
         align-self: center;
