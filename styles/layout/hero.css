@@ -12,14 +12,30 @@
     justify-content: flex-start;
     padding: 0 80px;
     gap: 150px;
-    background-image: url(../../public/herosection_3x.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
+    position: relative;
     text-align: left;
     font-size: 72px;
     color: var(--color-white);
     font-family: var(--font-lato);
+}
+
+.hero__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    z-index: 0;
+    display: block;
+}
+
+/* Ensure foreground content stays above background image */
+.hero > .header,
+.hero > .hero__text-container {
+    position: relative;
+    z-index: 1;
 }
 
 .hero__text-container {

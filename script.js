@@ -62,27 +62,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function validateForm() {
             let isValid = true;
-            const fields = [
-                { element: companyName, value: companyName.value.trim() },
-                { element: companyEmail, value: companyEmail.value.trim() },
-                { element: phoneNumber, value: phoneNumber.value.trim() },
-                { element: lastName, value: lastName.value.trim() },
-                { element: firstName, value: firstName.value.trim() },
-                { element: inquiryContent, value: inquiryContent.value.trim() }
+            let errorMessages = [];
+            
+            // すべてのフィールドのエラー表示をクリア
+            const allFields = [companyName, companyEmail, phoneNumber, lastName, firstName, inquiryContent];
+            allFields.forEach(field => clearFieldError(field));
+
+            // 必須項目チェック（会社名、メール、問い合わせ内容）
+            const requiredFields = [
+                { element: companyName, name: '会社名', value: companyName.value.trim() },
+                { element: companyEmail, name: 'メールアドレス', value: companyEmail.value.trim() },
+                { element: inquiryContent, name: 'お問い合わせ内容', value: inquiryContent.value.trim() }
             ];
 
-            fields.forEach(field => clearFieldError(field.element));
-
-            fields.forEach(field => {
+            requiredFields.forEach(field => {
                 if (!field.value) {
                     setFieldError(field.element);
+                    errorMessages.push(`${field.name}は必須項目です。`);
                     isValid = false;
                 }
             });
 
-            if (companyEmail.value.trim() && !validateEmail(companyEmail.value.trim())) {
+            // メールアドレス形式チェック
+            const emailValue = companyEmail.value.trim();
+            if (emailValue && !validateEmail(emailValue)) {
                 setFieldError(companyEmail);
+                errorMessages.push('メールアドレスの形式が正しくありません。');
                 isValid = false;
+            }
+
+            // エラーメッセージをアラート表示
+            if (!isValid) {
+                alert('入力内容にエラーがあります:\n\n' + errorMessages.join('\n'));
             }
 
             return isValid;

@@ -405,6 +405,10 @@
         padding: 0 31px;
         margin: 2px 0;
     }
+    /* Ensure the second ("名") field matches left padding on mobile */
+    .form__name-field:last-child {
+        padding: 0 31px;
+    }
     
     .form__name-container {
         height: auto;
