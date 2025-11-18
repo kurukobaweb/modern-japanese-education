@@ -402,12 +402,9 @@
     .form__name-field {
         max-width: 100%;
         width: 100%;
-        padding: 0 31px;
-        margin: 2px 0;
-    }
-    /* Ensure the second ("名") field matches left padding on mobile */
-    .form__name-field:last-child {
-        padding: 0 31px;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
     }
     
     .form__name-container {

@@ -146,11 +146,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding: 0 34px;
-}
-
-.form__name-field:last-child {
-    padding: 0 34px;
+    padding: 0 31px;
 }
 
 /* テキストエリア */
