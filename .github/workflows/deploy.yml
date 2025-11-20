@@ -3,12 +3,12 @@ name: Deploy to Staging
 on:
   push:
     branches:
-      - develop  # developブランチにpushしたら実行
+      - develop
+  workflow_dispatch:  # 手動実行を許可
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
