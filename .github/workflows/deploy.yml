@@ -3,7 +3,7 @@ name: Deploy to Staging
 on:
   push:
     branches:
-      - main  # mainブランチにpushしたら実行
+      - main  # developブランチにpushしたら実行
 
 jobs:
   deploy:
